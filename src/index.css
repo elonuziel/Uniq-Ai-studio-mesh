@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Rubik', 'Heebo', system-ui, sans-serif;
+  }
+}
+
+/* Custom highlight pulse for cross-referenced items */
+@keyframes highlight-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.4);
+    transform: scale(1.01);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(236, 72, 153, 0.6);
+    transform: scale(1.02);
+  }
+}
+
+.item-highlight-pulse {
+  animation: highlight-glow 1.5s ease-in-out infinite;
+  border-color: #db2777 !important;
+}

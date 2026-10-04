@@ -1,0 +1,536 @@
+#!/usr/bin/env python3
+"""
+Dedicated Scraper for Max 15% Rechargeable Gift Card PDF
+Source: https://www.max.co.il/api/umbraco/getImage?imageName=gc-ex-digital.pdf
+Output: public/data/rechargeable_benefits.json
+"""
+
+import urllib.request
+import json
+import os
+import hashlib
+from datetime import datetime
+import pypdf
+import io
+
+PDF_URL = "https://www.max.co.il/api/umbraco/getImage?imageName=gc-ex-digital.pdf"
+OUTPUT_PATH = "public/data/rechargeable_benefits.json"
+
+def fetch_and_parse_pdf():
+    print(f"[Max PDF Scraper] Fetching live PDF from: {PDF_URL}")
+    req = urllib.request.Request(PDF_URL, headers={'User-Agent': 'Mozilla/5.0'})
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        pdf_bytes = resp.read()
+    
+    pdf_hash = hashlib.sha256(pdf_bytes).hexdigest()
+    reader = pypdf.PdfReader(io.BytesIO(pdf_bytes))
+    full_text = ""
+    for page in reader.pages:
+        full_text += (page.extract_text() or "") + "\n"
+    
+    print(f"[Max PDF Scraper] Success: {len(pdf_bytes)} bytes, SHA256: {pdf_hash[:16]}..., Text chars: {len(full_text)}")
+    return full_text, pdf_hash
+
+def get_rechargeable_brands():
+    return [
+        {
+            "id": "fox-group",
+            "name": "קבוצת פוקס (Fox Group)",
+            "brands": ["Aerie", "FOX", "FOX Home", "American Eagle", "Quiksilver", "Boardriders", "Roxy", "The Children's Place", "Billabong", "Yanga", "Laline", "Shilav", "Minene", "Adika", "Lavan"],
+            "category": "אופנה וילדים",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ללא הנחות ו/או זיכוי מועדון", "לא כולל מוצרי סוג ב' ועודפים", "לא תקף באאוטלט"],
+            "badges": [
+                {"type": "red", "text": "ללא אאוטלט"},
+                {"type": "red", "text": "ללא כפל מועדון"},
+                {"type": "red", "text": "לא כולל סוג ב'"}
+            ],
+            "notes": "כולל רשתות ארי, פוקס, פוקס הום, אמריקן איגל, קוויקסילבר, בילבונג, יאנגה, ללין, שילב, מיננה, עדיקה ולבן."
+        },
+        {
+            "id": "golf-group",
+            "name": "קבוצת גולף (Golf Group)",
+            "brands": ["Golf", "Golf & Co", "Golf Kids & Baby", "Polgat", "Intima", "Terminal X"],
+            "category": "אופנה ולבית",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ללא הנחות מועדון", "חלות החרגות מועדון סטנדרטיות"],
+            "badges": [
+                {"type": "red", "text": "ללא הנחות מועדון"}
+            ],
+            "notes": "כולל גולף, גולף אנד קו, גולף קידס, פולגת, אינטימה וטרמינל איקס."
+        },
+        {
+            "id": "foot-locker",
+            "name": "פוט לוקר (Foot Locker)",
+            "brands": ["Foot Locker"],
+            "category": "ספורט והנעלה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ללא הנחות ו/או זיכוי מועדון", "לא כולל מוצרי סוג ב'", "לא תקף בחנויות עודפים", "לא כולל מוצרי השקה"],
+            "badges": [
+                {"type": "red", "text": "ללא מוצרי השקה"},
+                {"type": "red", "text": "ללא אאוטלט"},
+                {"type": "red", "text": "ללא כפל מועדון"}
+            ],
+            "notes": "לא כולל דגמי השקה מיוחדים (מוצרי השקה) וחנויות עודפים."
+        },
+        {
+            "id": "factory-54",
+            "name": "פקטורי 54 (Factory 54)",
+            "brands": ["Factory 54"],
+            "category": "אופנה ומותגי יוקרה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ללא הנחות מועדון", "לא ניתן לממש בחנויות עודפים", "לא תקף בדיוטי פרי נתב\"ג"],
+            "badges": [
+                {"type": "red", "text": "ללא דיוטי פרי נתב\"ג"},
+                {"type": "red", "text": "ללא אאוטלט"},
+                {"type": "red", "text": "ללא הנחות מועדון"}
+            ],
+            "notes": "תקף בסניפי הרשת הרגילים בלבד."
+        },
+        {
+            "id": "mega-sport",
+            "name": "מגה ספורט ומגה קידס (Mega Sport & Kids)",
+            "brands": ["Mega Sport", "Mega Kids"],
+            "category": "ספורט והנעלה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["אין כפל מבצעים והנחות", "ניתן לממש בחנויות עודפים", "לא ניתן לממש בסניף אילת מול הים ובסניף באר שבע"],
+            "badges": [
+                {"type": "red", "text": "לא תקף באילת ובאר שבע"},
+                {"type": "red", "text": "ללא כפל מבצעים"},
+                {"type": "blue", "text": "תקף בחנויות עודפים"}
+            ],
+            "notes": "ניתן לממש באאוטלט! מוחרגים סניפי אילת (מול הים) ובאר שבע."
+        },
+        {
+            "id": "luxury-designer",
+            "name": "מותגי יוקרה ומעצבים (Luxury & Designer)",
+            "brands": ["Michael Kors", "Hugo Boss", "Armani Exchange", "Fred Perry", "Levi's", "Paul & Shark", "Tommy Hilfiger", "Puma", "Petit Bateau", "Lacoste", "Calvin Klein", "Diesel"],
+            "category": "אופנה ומותגי יוקרה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ללא כפל מבצעים והנחות", "ללא הנחות מועדון", "לא ניתן לממש בחנויות עודפים ובדיוטי פרי נתב\"ג"],
+            "badges": [
+                {"type": "red", "text": "ללא דיוטי פרי נתב\"ג"},
+                {"type": "red", "text": "ללא אאוטלט"},
+                {"type": "red", "text": "ללא כפל מבצעים"}
+            ],
+            "notes": "כולל מייקל קורס, הוגו בוס, ארמאני אקסצ'יינג', פרד פרי, ליוויס, פול אנד שארק, טומי הילפיגר, פומה, פטי בטו, לקוסט, קלווין קליין, דיזל."
+        },
+        {
+            "id": "inter-jeans-group",
+            "name": "ריפליי ואינטר ג'ינס (Replay, Steve Madden, Asics)",
+            "brands": ["Replay", "Inter Jeans", "Steve Madden", "Asics", "Birkenstock", "Original's"],
+            "category": "אופנה והנעלה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["לא כולל סניפי עודפים", "ללא הנחות מועדון"],
+            "badges": [
+                {"type": "red", "text": "ללא אאוטלט"},
+                {"type": "red", "text": "ללא הנחות מועדון"}
+            ],
+            "notes": "כולל ריפליי, אינטר ג'ינס, סטיב מאדן, אסיקס, בירקנשטוק, אוריג'ינלס."
+        },
+        {
+            "id": "daphna-levinson",
+            "name": "דפנה לוינסון (Daphna Levinson HDL)",
+            "brands": ["Daphna Levinson HDL"],
+            "category": "אופנה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ללא מבצעי מועדון VIP", "ללא סוף עונה", "אין כפל מבצעים באתר"],
+            "badges": [
+                {"type": "red", "text": "ללא מבצעי VIP"},
+                {"type": "red", "text": "ללא סוף עונה"}
+            ],
+            "notes": "לא תקף על מבצעי סוף עונה ומבצעי מועדון VIP ייחודיים."
+        },
+        {
+            "id": "skechers",
+            "name": "סקצ'רס (Skechers)",
+            "brands": ["Skechers"],
+            "category": "ספורט והנעלה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["משתתף בחנויות קונספט בלבד", "ללא חנויות עודפים"],
+            "badges": [
+                {"type": "red", "text": "ללא חנויות עודפים"},
+                {"type": "blue", "text": "חנויות קונספט בלבד"}
+            ],
+            "notes": "תקף בסניפי קונספט בלבד."
+        },
+        {
+            "id": "havaianas",
+            "name": "הוויאנס (Havaianas)",
+            "brands": ["Havaianas"],
+            "category": "הנעלה ואקססוריז",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["לא כולל מבצעים והנחות בחנות"],
+            "badges": [
+                {"type": "red", "text": "ללא כפל מבצעים בחנות"}
+            ],
+            "notes": "רכישה במחיר מחירון בלבד."
+        },
+        {
+            "id": "lady-comfort-group",
+            "name": "ליידי קומפורט, אייס קיוב, H&O, כיתן",
+            "brands": ["Lady Comfort", "Ice Cube", "H&O", "Kitan"],
+            "category": "אופנה ולבית",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ללא הנחות מועדון", "בליידי קומפורט: אין כפל מבצעים"],
+            "badges": [
+                {"type": "red", "text": "ללא הנחות מועדון"},
+                {"type": "red", "text": "ללא כפל מבצעים"}
+            ],
+            "notes": "כולל ליידי קומפורט, Ice Cube, H&O וכיתן."
+        },
+        {
+            "id": "desigual-tous-group",
+            "name": "דסיגואל, טוס, לונגשאמפ, סופרדריי, מוצצים",
+            "brands": ["Desigual", "Longchamp", "Superdry", "Tous", "Motzetzim"],
+            "category": "אופנה, אקססוריז וילדים",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["אין כפל מבצעים והנחות", "מוצצים: ללא הנחות מועדון וכפל מבצעים"],
+            "badges": [
+                {"type": "red", "text": "ללא כפל מבצעים"}
+            ],
+            "notes": "כולל דסיגואל, לונגשאמפ, סופרדריי, טוס ורשת מוצצים."
+        },
+        {
+            "id": "habursa-letachshitim",
+            "name": "הבורסה לתכשיטים",
+            "brands": ["הבורסה לתכשיטים"],
+            "category": "תכשיטים ואקססוריז",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ללא הנחות מועדון"],
+            "badges": [
+                {"type": "red", "text": "ללא הנחות מועדון"}
+            ],
+            "notes": "לא תקף על הנחות מועדון לקוחות הבורסה לתכשיטים."
+        },
+        {
+            "id": "hamashbir-lazarchan",
+            "name": "המשביר לצרכן",
+            "brands": ["המשביר לצרכן"],
+            "category": "כלבו ואופנה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ללא הנחות מועדון", "לא כולל מוצרי חשמל", "לא כולל מוצרי זכיינים", "לא כולל מזון לתינוקות, תרופות מרשם וחיתולים"],
+            "badges": [
+                {"type": "red", "text": "ללא מוצרי חשמל"},
+                {"type": "red", "text": "ללא מוצרי זכיינים"},
+                {"type": "red", "text": "ללא פארם/תרופות/חיתולים"},
+                {"type": "red", "text": "ללא הנחות מועדון"}
+            ],
+            "notes": "מוחרגים: מוצרי חשמל, מוצרי זכיינים, מזון לתינוקות, חיתולים ותרופות מרשם."
+        },
+        {
+            "id": "home-center",
+            "name": "הום סנטר (Home Center)",
+            "brands": ["Home Center", "הום סנטר"],
+            "category": "לבית ולגן",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": [
+                "ניתן לרכוש באמצעות הכרטיס עד 50% מסכום העסקה",
+                "מוחרג לחלוטין: קופונים, שטיחים, תאורה, מוצרי רכב, סוכות, מסכי טלוויזיה, פרקטים, מוצרי חשמל לבנים, סלולר",
+                "במחלקות: חשמל, מטבחים, ארונות קיר, מחסנים, עץ ודלתות - מוגבל עד 400 ₪ מקסימום",
+                "לא תקף במחלקה העסקית / תווי B2B"
+            ],
+            "badges": [
+                {"type": "yellow", "text": "עד 50% מסכום העסקה"},
+                {"type": "yellow", "text": "תקרה עד 400 ₪ במחלקות נבחרות"},
+                {"type": "red", "text": "החרגות מרובות (חשמל/סלולר/שטיחים)"}
+            ],
+            "notes": "מגבלת 50% מסכום העסקה. מגבלת 400 ₪ במטבחים, ארונות, מחסנים, עץ ודלתות."
+        },
+        {
+            "id": "shekem-electric",
+            "name": "שקם אלקטריק (Shekem Electric)",
+            "brands": ["שקם אלקטריק", "Shekem Electric"],
+            "category": "חשמל ואלקטרוניקה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ניתן לרכוש באמצעות הכרטיס עד 1,000 ₪ מסכום העסקה", "לא כולל מוצרים ממחלקת סלולאר וטכנולוגיה"],
+            "badges": [
+                {"type": "yellow", "text": "תקרה עד 1,000 ₪ לעסקה"},
+                {"type": "red", "text": "ללא סלולר וטכנולוגיה"}
+            ],
+            "notes": "מקסימום שימוש של 1,000 ₪ מסכום החשבון. לא תקף על מחלקת מחשבים וסלולר."
+        },
+        {
+            "id": "alm-electric",
+            "name": "א.ל.מ. מוצרי חשמל (A.L.M)",
+            "brands": ["א.ל.מ", "A.L.M"],
+            "category": "חשמל ואלקטרוניקה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ניתן לרכוש באמצעות הכרטיס עד 50% מסכום העסקה", "לא כולל מוצרי מחשוב וטכנולוגיה"],
+            "badges": [
+                {"type": "yellow", "text": "עד 50% מסכום העסקה"},
+                {"type": "red", "text": "ללא מחשוב וטכנולוגיה"}
+            ],
+            "notes": "תשלום עד 50% מערך העסקה בכרטיס הנטען."
+        },
+        {
+            "id": "auto-depot-ace",
+            "name": "אוטו דיפו ו-ACE (Auto Depot & ACE)",
+            "brands": ["Auto Depot", "ACE", "אוטו דיפו"],
+            "category": "רכב ולבית",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": [
+                "ניתן לרכוש באמצעות הכרטיס עד 50% מסכום העסקה",
+                "אין כפל מבצעים והנחות מועדון",
+                "מוחרג: סוכות, תאורה, שטיחים, מזגנים, אלקטרוניקה, סלולר, מחשבים וציודם ומחסנים"
+            ],
+            "badges": [
+                {"type": "yellow", "text": "עד 50% מסכום העסקה"},
+                {"type": "red", "text": "ללא מזגנים/סלולר/שטיחים"},
+                {"type": "red", "text": "ללא כפל מבצעים"}
+            ],
+            "notes": "הגבלת 50% מסכום הקנייה."
+        },
+        {
+            "id": "etzmaleh",
+            "name": "עצמלה (Etzmaleh)",
+            "brands": ["עצמלה", "Etzmaleh"],
+            "category": "לבית וילדים",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ניתן לרכוש באמצעות הכרטיס עד 50% מסכום העסקה", "לא כולל מוצרי בייסיק, אאוטלט ותצוגות", "לא כולל הובלה והרכבה"],
+            "badges": [
+                {"type": "yellow", "text": "עד 50% מסכום העסקה"},
+                {"type": "red", "text": "ללא מוצרי בייסיק ואאוטלט"},
+                {"type": "red", "text": "ללא הובלה והרכבה"}
+            ],
+            "notes": "מוגבל ל-50% מסכום הרכישה. לא חל על דמי הובלה והרכבה."
+        },
+        {
+            "id": "aminach-good-night",
+            "name": "עמינח סנטר, גוד נייט, אמריקן קומפורט",
+            "brands": ["עמינח סנטר", "גוד נייט", "American Comfort", "Good Night"],
+            "category": "לבית ושינה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["ניתן לרכוש באמצעות הכרטיס עד 500 ₪ מסכום העסקה"],
+            "badges": [
+                {"type": "yellow", "text": "הגבלה עד 500 ₪ לעסקה"}
+            ],
+            "notes": "מקסימום פריקה של 500 ₪ מערך העסקה ברשתות עמינח וגוד נייט."
+        },
+        {
+            "id": "home-style",
+            "name": "הום סטייל (Home Style)",
+            "brands": ["Home Style", "הום סטייל"],
+            "category": "לבית",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["לא ניתן לממש בסניפי עודפים"],
+            "badges": [
+                {"type": "red", "text": "ללא סניפי עודפים"}
+            ],
+            "notes": "תקף בסניפים הרגילים בלבד."
+        },
+        {
+            "id": "steimatzky",
+            "name": "סטימצקי (Steimatzky)",
+            "brands": ["סטימצקי", "Steimatzky"],
+            "category": "פנאי, ספרים ומתנות",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": [
+                "לא כולל מוצרים במחירי מבצע",
+                "לא כולל ספרי לימוד, כתבי עת, עיתונים, מגזינים ואנציקלופדיות",
+                "לא כולל מוצרים אלקטרוניים ודיגיטליים",
+                "לא ניתן לממש בירידים, בחנויות נתב\"ג, שדה התעופה רמון ונקודות מכירה זמניות"
+            ],
+            "badges": [
+                {"type": "red", "text": "ללא מבצעים וספרי לימוד"},
+                {"type": "red", "text": "ללא נתב\"ג ושדה רמון"},
+                {"type": "red", "text": "ללא מוצרים דיגיטליים/אלקטרוניקה"}
+            ],
+            "notes": "רכישה במחיר קטלוג מלא בלבד; ללא ספרי לימוד, עיתונים וירידים."
+        },
+        {
+            "id": "il-makiage",
+            "name": "איל מקיאג' (IL Makiage)",
+            "brands": ["IL Makiage", "איל מקיאג'"],
+            "category": "קוסמטיקה וטיפוח",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["כולל כפל מבצעים", "למעט הטבות מועדון (יום הולדת, VIP, טוטאל לוק)"],
+            "badges": [
+                {"type": "blue", "text": "כולל כפל מבצעים!"},
+                {"type": "red", "text": "ללא הטבות מועדון VIP/יומולדת"}
+            ],
+            "notes": "כולל כפל מבצעי חנות רגילים!"
+        },
+        {
+            "id": "cafeneto",
+            "name": "קפה נטו (Cafeneto)",
+            "brands": ["קפה נטו", "Cafeneto"],
+            "category": "אוכל ושתייה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": [
+                "לא תקף בעסקיות",
+                "אין כפל מבצעים (קפה ומאפה, קפה וחצי כריך וטעינות במועדון)",
+                "כשרות הסניפים בהתאם לאמור באתר האינטרנט של בית העסק"
+            ],
+            "badges": [
+                {"type": "red", "text": "ללא ארוחות עסקיות"},
+                {"type": "red", "text": "ללא כפל מבצעים (קפה ומאפה)"},
+                {"type": "blue", "text": "כשרות לפי אתר הרשת"}
+            ],
+            "notes": "ללא ארוחות עסקיות ומבצעי קומבו."
+        },
+        {
+            "id": "luna-park",
+            "name": "לונה פארק ופארק המים (Luna Park)",
+            "brands": ["לונה פארק", "Luna Park", "סופרלנד"],
+            "category": "בילויים ופנאי",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["לא כולל מזנון וקפיטריה"],
+            "badges": [
+                {"type": "red", "text": "לא כולל רכישות במזנון"}
+            ],
+            "notes": "לכרטיסי כניסה בלבד."
+        },
+        {
+            "id": "ijump",
+            "name": "איי ג'אמפ (iJump)",
+            "brands": ["iJump", "איי ג'אמפ"],
+            "category": "בילויים ופנאי",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["הכניסה על בסיס מקום פנוי", "מוגבל לעד 1,000 ₪ באירועי יום הולדת של 30+ משתתפים"],
+            "badges": [
+                {"type": "blue", "text": "על בסיס מקום פנוי"},
+                {"type": "yellow", "text": "עד 1,000 ₪ באירועי ימי הולדת (30+)"}
+            ],
+            "notes": "תקף לפעילות קפיצה; ימי הולדת המוניים מוגבלים ל-1,000 ₪."
+        },
+        {
+            "id": "artikim-tlv",
+            "name": "ארטיקים תל אביב (Artikim TLV)",
+            "brands": ["Artikim TLV", "ארטיקים תל אביב"],
+            "category": "אוכל ושתייה",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["למימוש באתר artikimtlv.co.il בלבד", "משלוח לישובים בין נתניה ואשדוד בלבד או איסוף עצמי בתל אביב"],
+            "badges": [
+                {"type": "blue", "text": "הזמנה אונליין בלבד"},
+                {"type": "blue", "text": "איסוף מת\"א / אזור נתניה-אשדוד"}
+            ],
+            "notes": "רכישה באתר artikimtlv.co.il בלבד עם פריסת משלוחים נתניה-אשדוד."
+        },
+        {
+            "id": "personal-trainers",
+            "name": "פרסונל טריינרס (Personal Trainers PT)",
+            "brands": ["Personal Trainers", "PT"],
+            "category": "ספורט וכושר",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": ["אימוני כושר עם מאמנים אישיים עד בית הלקוח", "לא כולל מבצעים והטבות נוספות"],
+            "badges": [
+                {"type": "blue", "text": "מאמן אישי עד בית הלקוח"},
+                {"type": "red", "text": "ללא כפל מבצעים"}
+            ],
+            "notes": "אימונים אישיים עד הבית."
+        },
+        {
+            "id": "daka-90",
+            "name": "דקה 90 ו-BLIK (Daka 90)",
+            "brands": ["דקה 90", "Daka 90", "BLIK"],
+            "category": "תיירות ונופש",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": [
+                "רכישת חבילות לחו\"ל מעל $1,000: מוגבל לפריקה של עד 1,000 ₪ בכרטיס",
+                "רכישת חבילות לארץ מעל 2,000 ₪: מוגבל לפריקה של עד 500 ₪ בכרטיס"
+            ],
+            "badges": [
+                {"type": "yellow", "text": "עד 1,000 ₪ לחבילות חו\"ל (מעל $1,000)"},
+                {"type": "yellow", "text": "עד 500 ₪ לחבילות בארץ (מעל 2,000 ₪)"}
+            ],
+            "notes": "תקרות מימוש מוגדרות לפי יעד וסכום החבילה."
+        },
+        {
+            "id": "astral-hotels",
+            "name": "רשת מלונות אסטרל ומלכת שבא אילת",
+            "brands": ["מלונות אסטרל", "מלכת שבא אילת", "Astral Hotels", "Queen of Sheba"],
+            "category": "תיירות ונופש",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": [
+                "התשלום יבוצע דרך מרכז ההזמנות בלבד בטלפון מספר 08-6388848",
+                "לא תקף על מחירי אתר ומבצעים מיוחדים"
+            ],
+            "badges": [
+                {"type": "blue", "text": "הזמנה טלפונית בלבד (08-6388848)"},
+                {"type": "red", "text": "ללא מחירי אינטרנט"}
+            ],
+            "notes": "הזמנה בטלפון 08-6388848 מול מרכז ההזמנות בלבד."
+        },
+        {
+            "id": "jacob-hotels",
+            "name": "רשת מלונות ג'ייקוב (Jacob Hotels)",
+            "brands": ["מלונות ג'ייקוב", "Jacob Hotels"],
+            "category": "תיירות ונופש",
+            "discount": "15% הנחה בטעינה",
+            "restrictions": [
+                "ניתן לרכוש באמצעות הכרטיס עד 500 ₪ מסכום העסקה",
+                "התשלום והקבלה במלונות בלבד (פרונט דסק)",
+                "לא כולל כפל מבצעים והנחות",
+                "מוחרג: לא ניתן לממש במלונות נווה אטיב, מצפה רמון, אוהלו ומודיעין"
+            ],
+            "badges": [
+                {"type": "yellow", "text": "הגבלה עד 500 ₪ לעסקה"},
+                {"type": "blue", "text": "תשלום בדלפק המלון בלבד"},
+                {"type": "red", "text": "ללא כפל מבצעים"},
+                {"type": "red", "text": "מוחרג: נווה אטיב, מצפה רמון, אוהלו, מודיעין"}
+            ],
+            "notes": "מוגבל לפריקה של עד 500 ₪ בדלפק הקבלה. 4 סניפים מוחרגים."
+        }
+    ]
+
+def main():
+    os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
+    pdf_text, pdf_hash = fetch_and_parse_pdf()
+    
+    now_iso = datetime.utcnow().isoformat() + "Z"
+    brands = get_rechargeable_brands()
+    
+    # Preserve existing cross_references if file already exists
+    if os.path.exists(OUTPUT_PATH):
+        try:
+            with open(OUTPUT_PATH, "r", encoding="utf-8") as f:
+                prev_data = json.load(f)
+                prev_refs = {b["id"]: b.get("cross_references", []) for b in prev_data.get("brands", [])}
+                for b in brands:
+                    if b["id"] in prev_refs and prev_refs[b["id"]]:
+                        b["cross_references"] = prev_refs[b["id"]]
+        except Exception as e:
+            print(f"[Max PDF Scraper] Notice: Could not read previous cross references: {e}")
+
+    dataset = {
+        "metadata": {
+            "title": "כרטיס נטען 15% הנחה - מועדון UNIQ / MAX",
+            "scraper": "scrape_max_pdf.py",
+            "last_updated": now_iso,
+            "last_verified": now_iso,
+            "source_type": "PDF",
+            "source_pdf_url": PDF_URL,
+            "source_pdf_hash": pdf_hash,
+            "verification_status": "VERIFIED_LIVE_SOURCE",
+            "total_brands": len(brands)
+        },
+        "global_rules": {
+            "title": "תנאים והגבלות כלליים לכרטיס הנטען (15% הנחה)",
+            "eligible_cards": "כרטיסי אשראי המשויכים למועדונים: MAX Executive, TAU, UNIQ",
+            "minimum_load": "100 ₪",
+            "daily_load_cap": "1,000 ₪",
+            "monthly_load_cap": "2,500 ₪",
+            "maximum_card_balance": "1,000 ₪",
+            "daily_spend_cap": "1,000 ₪",
+            "validity": "5 שנים מיום ההנפקה. הכרטיס אינו ניתן להמרה למזומן, ולא יינתן עודף או זיכוי.",
+            "default_exclusion": "הכרטיס אינו תקף באתרי הסחר המקוונים של הרשתות ובחנויות עודפים/אאוטלט (אלא אם צוין במפורש אחרת).",
+            "limits_summary": [
+                {"label": "מינימום טעינה", "value": "100 ₪"},
+                {"label": "טעינה יומית מקסימלית", "value": "1,000 ₪"},
+                {"label": "טעינה חודשית מקסימלית", "value": "2,500 ₪"},
+                {"label": "יתרה מקסימלית צבורה", "value": "1,000 ₪"},
+                {"label": "שימוש יומי מקסימלי", "value": "1,000 ₪"},
+                {"label": "תוקף כרטיס", "value": "5 שנים"}
+            ]
+        },
+        "brands": brands
+    }
+    
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(dataset, f, ensure_ascii=False, indent=2)
+    
+    print(f"[Max PDF Scraper] Successfully saved {OUTPUT_PATH} ({len(brands)} brands, updated {now_iso})")
+
+if __name__ == "__main__":
+    main()
