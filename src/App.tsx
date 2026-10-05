@@ -56,20 +56,42 @@ export const App: React.FC = () => {
         setIsLoading(true);
         setLoadError(null);
 
-        // Try both relative and root path to support local dev and GitHub Pages base paths
+        // Try candidate paths to support local dev and GitHub Pages base paths (with or without trailing slashes)
+        const getCandidatePaths = (fileName: string) => {
+          const pathname = window.location.pathname;
+          const normalizedPathname = pathname.endsWith('/') ? pathname : `${pathname}/`;
+          const baseUrl = (import.meta as any).env?.BASE_URL || './';
+          const normalizedBaseUrl = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+
+          const paths = [
+            `${normalizedPathname}data/${fileName}`,
+            `${normalizedBaseUrl}data/${fileName}`,
+            `./data/${fileName}`,
+            `/data/${fileName}`,
+            `data/${fileName}`,
+          ];
+
+          return Array.from(new Set(paths));
+        };
+
         const fetchFile = async (fileName: string) => {
-          const paths = [`./data/${fileName}`, `/data/${fileName}`, `data/${fileName}`];
-          for (const path of paths) {
+          const candidatePaths = getCandidatePaths(fileName);
+          let lastErr: any = null;
+
+          for (const path of candidatePaths) {
             try {
               const res = await fetch(path);
-              if (res.ok) {
-                return await res.json();
-              }
-            } catch {
-              // try next path
+              if (!res.ok) continue;
+
+              const contentType = (res.headers && typeof res.headers.get === 'function') ? (res.headers.get('content-type') || '') : '';
+              if (contentType.includes('text/html')) continue;
+
+              return await res.json();
+            } catch (err) {
+              lastErr = err;
             }
           }
-          throw new Error(`Failed to load ${fileName}`);
+          throw lastErr || new Error(`Failed to load ${fileName}`);
         };
 
         const [rec, scraped] = await Promise.all([
@@ -120,11 +142,15 @@ export const App: React.FC = () => {
       if (targetId) {
         const el = document.getElementById(`card-${targetId}`);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          if (typeof el.scrollIntoView === 'function') {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
           return;
         }
       }
-      window.scrollTo({ top: 350, behavior: 'smooth' });
+      if (typeof window.scrollTo === 'function') {
+        window.scrollTo({ top: 350, behavior: 'smooth' });
+      }
     }, 100);
   };
 
