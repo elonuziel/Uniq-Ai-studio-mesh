@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrapedBrandDiscount, TabKey } from '../types';
 import { BadgePill } from './BadgePill';
 import { CrossReferenceTag } from './CrossReferenceTag';
-import { Store, Tag, ChevronLeft } from 'lucide-react';
+import { Store, Tag, ExternalLink } from 'lucide-react';
 
 interface TabCViewProps {
   brands: ScrapedBrandDiscount[];
@@ -31,6 +31,11 @@ export const TabCView: React.FC<TabCViewProps> = ({
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {brands.map((brand) => {
         const isHighlighted = highlightedId === brand.id || highlightedId === brand.original_id;
+        const directUrl =
+          brand.direct_url ||
+          (brand.price !== undefined
+            ? `https://www.uniq-club.co.il/product/${brand.original_id}`
+            : `https://www.uniq-club.co.il/benefit/${brand.original_id}`);
 
         return (
           <div
@@ -56,11 +61,22 @@ export const TabCView: React.FC<TabCViewProps> = ({
                 </span>
               </div>
 
-              {/* Title & Chevron */}
-              <h3 className="text-base font-bold text-slate-900 group-hover:text-indigo-700 transition-colors mb-2 flex items-start justify-between gap-2">
-                <span>{brand.name}</span>
-                <ChevronLeft className="w-4 h-4 text-slate-300 group-hover:text-indigo-600 group-hover:-translate-x-1 transition-all shrink-0 mt-1" />
-              </h3>
+              {/* Title & Direct Site Link */}
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-indigo-700 transition-colors leading-snug">
+                  {brand.name}
+                </h3>
+                <a
+                  href={directUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="p-1.5 rounded-lg text-slate-400 hover:text-indigo-700 hover:bg-indigo-50 transition-colors shrink-0"
+                  title={`פתח את ${brand.name} באתר UNIQ`}
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
 
               {/* Badges */}
               <div className="flex flex-wrap gap-1.5 my-2.5">

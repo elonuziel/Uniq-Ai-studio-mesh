@@ -155,4 +155,36 @@ describe('UNIC Club Portal - Unit & Integration Tests', () => {
       });
     }
   });
+
+  it('opens direct link to relevant discount on UNIQ website for specific items', async () => {
+    render(<App />);
+
+    await waitFor(() => {
+      expect(screen.getByText(/מועדון UNIQ/i)).toBeInTheDocument();
+    });
+
+    // Switch to Tab B: הטבות לפי מוצר
+    const tabBButton = screen.getByRole('button', { name: /הטבות לפי מוצר/i });
+    fireEvent.click(tabBButton);
+
+    // Search for "מגש פירות"
+    const searchInput = screen.getByPlaceholderText(/חיפוש לפי שם מותג/i);
+    fireEvent.change(searchInput, { target: { value: 'מגש פירות' } });
+
+    await waitFor(() => {
+      expect(screen.getByText(/מגש פירות עם יין \/ עוגה/i)).toBeInTheDocument();
+    });
+
+    // Check direct link on card points to product 2982
+    const directLink = screen.getByTitle(/פתח את מגש פירות עם יין \/ עוגה באתר UNIQ/i);
+    expect(directLink).toHaveAttribute('href', 'https://www.uniq-club.co.il/product/2982');
+
+    // Click on card to open detail modal
+    fireEvent.click(screen.getByText(/מגש פירות עם יין \/ עוגה/i));
+
+    await waitFor(() => {
+      const modalLink = screen.getByRole('link', { name: /פתח הטבה זו ישירות באתר הרשמי/i });
+      expect(modalLink).toHaveAttribute('href', 'https://www.uniq-club.co.il/product/2982');
+    });
+  });
 });

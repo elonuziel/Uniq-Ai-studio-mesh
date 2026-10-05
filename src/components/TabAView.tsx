@@ -2,7 +2,7 @@ import React from 'react';
 import { RechargeableBrand, TabKey } from '../types';
 import { BadgePill } from './BadgePill';
 import { CrossReferenceTag } from './CrossReferenceTag';
-import { CreditCard, Tag, ChevronLeft, AlertCircle } from 'lucide-react';
+import { CreditCard, Tag, ExternalLink, AlertCircle } from 'lucide-react';
 
 interface TabAViewProps {
   brands: RechargeableBrand[];
@@ -31,6 +31,9 @@ export const TabAView: React.FC<TabAViewProps> = ({
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {brands.map((brand) => {
         const isHighlighted = highlightedId === brand.id;
+        const directUrl =
+          brand.direct_url ||
+          'https://www.max.co.il/api/umbraco/getImage?imageName=gc-ex-digital.pdf';
 
         return (
           <div
@@ -56,11 +59,22 @@ export const TabAView: React.FC<TabAViewProps> = ({
                 </span>
               </div>
 
-              {/* Brand Name */}
-              <h3 className="text-base font-bold text-slate-900 group-hover:text-pink-600 transition-colors mb-1.5 flex items-center justify-between">
-                <span>{brand.name}</span>
-                <ChevronLeft className="w-4 h-4 text-slate-300 group-hover:text-pink-500 group-hover:-translate-x-1 transition-all" />
-              </h3>
+              {/* Brand Name & Direct PDF Link */}
+              <div className="flex items-start justify-between gap-2 mb-1.5">
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-pink-600 transition-colors leading-snug">
+                  {brand.name}
+                </h3>
+                <a
+                  href={directUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="p-1.5 rounded-lg text-slate-400 hover:text-pink-600 hover:bg-pink-50 transition-colors shrink-0"
+                  title="פתח ספח תנאים רשמי (PDF)"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
 
               {/* Sub-brands if multiple */}
               {brand.brands && brand.brands.length > 1 && (

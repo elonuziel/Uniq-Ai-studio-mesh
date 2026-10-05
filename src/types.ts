@@ -23,6 +23,7 @@ export interface RechargeableBrand {
   badges: Badge[];
   notes?: string;
   cross_references?: CrossReference[];
+  direct_url?: string;
 }
 
 export interface GlobalRuleLimit {
@@ -74,6 +75,7 @@ export interface ScrapedItemDeal {
   image_url?: string | null;
   tags?: string[];
   cross_references?: CrossReference[];
+  direct_url?: string;
 }
 
 export interface ScrapedBrandDiscount {
@@ -92,6 +94,7 @@ export interface ScrapedBrandDiscount {
   logo_url?: string | null;
   tags?: string[];
   cross_references?: CrossReference[];
+  direct_url?: string;
 }
 
 export interface ScrapedBillingDiscount {
@@ -109,6 +112,7 @@ export interface ScrapedBillingDiscount {
   logo_url?: string | null;
   tags?: string[];
   cross_references?: CrossReference[];
+  direct_url?: string;
 }
 
 export interface ScrapedDataset {

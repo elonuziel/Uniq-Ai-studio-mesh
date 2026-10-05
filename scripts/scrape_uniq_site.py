@@ -156,7 +156,8 @@ def classify_items(raw_items):
                 "badges": badges,
                 "terms": desc or f"הנחה של {percentage} ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
                 "logo_url": item.get("logoFile", {}).get("url") if item.get("logoFile") else (item.get("primaryImage", {}).get("url") if item.get("primaryImage") else None),
-                "tags": item.get("tags") or []
+                "tags": item.get("tags") or [],
+                "direct_url": f"https://www.uniq-club.co.il/benefit/{item['id']}"
             })
         elif typename == "Product":
             price = item.get("price")
@@ -197,7 +198,8 @@ def classify_items(raw_items):
                     "badges": badges,
                     "terms": desc or "הטבה ייחודית לחברי מועדון UNIQ.",
                     "image_url": item.get("primaryImage", {}).get("url"),
-                    "tags": item.get("tags") or []
+                    "tags": item.get("tags") or [],
+                    "direct_url": f"https://www.uniq-club.co.il/product/{item['id']}"
                 })
             else:
                 badges = []
@@ -221,7 +223,8 @@ def classify_items(raw_items):
                     "badges": badges,
                     "terms": desc or "מוצר במחיר מועדון UNIQ מיוחד.",
                     "image_url": item.get("primaryImage", {}).get("url"),
-                    "tags": item.get("tags") or []
+                    "tags": item.get("tags") or [],
+                    "direct_url": f"https://www.uniq-club.co.il/product/{item['id']}"
                 })
         else:
             disc_text = item.get("discount") or "הטבת מועדון"
@@ -236,7 +239,8 @@ def classify_items(raw_items):
                 "badges": [{"type": "yellow", "text": disc_text}],
                 "terms": desc or "הטבה בלעדית למחזיקי כרטיס יוניק.",
                 "logo_url": item.get("logoFile", {}).get("url") if item.get("logoFile") else None,
-                "tags": item.get("tags") or []
+                "tags": item.get("tags") or [],
+                "direct_url": f"https://www.uniq-club.co.il/benefit/{item['id']}"
             })
 
     print(f"[UNIQ Site Scraper] Breakdown: Tab B: {len(tab_b_deals)}, Tab C: {len(tab_c_brands)}, Tab D: {len(tab_d_billing)}")

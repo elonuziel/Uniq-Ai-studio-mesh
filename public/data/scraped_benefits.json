@@ -2,8 +2,8 @@
   "metadata": {
     "title": "הטבות ומבצעים מועדון UNIQ (חיבור חי)",
     "scraper": "scrape_uniq_site.py",
-    "last_updated": "2026-10-04T23:34:28.632244Z",
-    "scraped_at": "2026-10-04T23:34:28.632244Z",
+    "last_updated": "2026-10-04T23:46:37.726823Z",
+    "scraped_at": "2026-10-04T23:46:37.726823Z",
     "source": "https://www.uniq-club.co.il",
     "api_endpoint": "https://admin.uniq-club.co.il/api/graphql",
     "counts": {
@@ -50,6 +50,7 @@
         "מגש פירות",
         "פירות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/2982",
       "cross_references": []
     },
     {
@@ -90,6 +91,7 @@
         "חיפה",
         "כיף"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4039",
       "cross_references": []
     },
     {
@@ -131,6 +133,7 @@
         "מוצרי חשמל לבית",
         "ניופאן"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4060",
       "cross_references": []
     },
     {
@@ -172,6 +175,7 @@
         "מוצרי חשמל לבית",
         "ניופאן"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4061",
       "cross_references": []
     },
     {
@@ -217,6 +221,7 @@
         "כדורגל",
         "מסך"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4062",
       "cross_references": []
     },
     {
@@ -258,6 +263,7 @@
         "jump",
         "פארק"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4173",
       "cross_references": [
         {
           "tab": "A",
@@ -305,6 +311,7 @@
         "פארק",
         "פארק טרמפולינות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4174",
       "cross_references": [
         {
           "tab": "A",
@@ -353,6 +360,7 @@
         "פארק",
         "jump"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4175",
       "cross_references": [
         {
           "tab": "A",
@@ -400,6 +408,7 @@
         "קפיצה",
         "פארק"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4176",
       "cross_references": [
         {
           "tab": "A",
@@ -442,6 +451,7 @@
       "terms": "לראשונה בישראל!המוזיאון הישראלי הראשון לרפואה בטכנודע חדרה מזמן לכם חוויה עוצמתית, אינטראקטיבית ורב חושית.&nbsp; 39 ש\"ח במקום 70 ש\"ח&nbsp; במוזיאון 6 תערוכות הכוללות 120 מיצגים אינטראקטיביים העוסקים בגוף האדם וברפואה. המוזיאון כולל גם חדרי ניתוח ובהם סימולטורים אנושיים, באמצעותם ממחישים פרוצדורות רפואיות כגון: החלפת מסתם בלב, ברונכוסקופיה, צינתור מוח, הנשמות ועוד.&nbsp; היכנסו אל תוך לב ענק ותהנו מחוויה אור קולית מרהיבה, שחקו בכדור באמצעות כוח המחשבה, פענחו מקרה פשיעה בעזרת ממצאים גנטיים והתרשמו ממודל הסליל הכפול של ה- DNA הנישא לגובה של 3 קומות - זאת ועוד הפתעות רבות נוספות מחכות לכם במוזיאון.",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/eeb2650994bf8e7e414d00a6afcdcb55.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4190",
       "cross_references": []
     },
     {
@@ -477,6 +487,7 @@
       "terms": "לראשונה בישראל!המוזיאון הישראלי הראשון לרפואה בטכנודע חדרה מזמן לכם חוויה עוצמתית, אינטראקטיבית ורב חושית.&nbsp; 39 ש\"ח במקום 70 ש\"ח ! במוזיאון 6 תערוכות הכוללות 120 מיצגים אינטראקטיביים העוסקים בגוף האדם וברפואה. המוזיאון כולל גם חדרי ניתוח ובהם סימולטורים אנושיים, באמצעותם ממחישים פרוצדורות רפואיות כגון: החלפת מסתם בלב, ברונכוסקופיה, צינתור מוח, הנשמות ועוד.&nbsp; היכנסו אל תוך לב ענק ותהנו מחוויה אור קולית מרהיבה, שחקו בכדור באמצעות כוח המחשבה, פענחו מקרה פשיעה בעזרת ממצאים גנטיים והתרשמו ממודל הסליל הכפול של ה- DNA הנישא לגובה של 3 קומות - זאת ועוד הפתעות רבות נוספות מחכות לכם במוזיאון.",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/e195948df20cd553dd171336195c9f6a.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4191",
       "cross_references": []
     },
     {
@@ -530,6 +541,7 @@
         "הצגה",
         "בת הים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4484",
       "cross_references": []
     },
     {
@@ -585,6 +597,7 @@
         "באגיס",
         "הקוסם מארץ עוץ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4485",
       "cross_references": []
     },
     {
@@ -640,6 +653,7 @@
         "באגיס",
         "הקוסם מארץ עוץ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4489",
       "cross_references": []
     },
     {
@@ -680,6 +694,7 @@
         "ים",
         "אטרקציות מים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4495",
       "cross_references": []
     },
     {
@@ -724,6 +739,7 @@
         "משחק חשיבה",
         "מוזיקה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4504",
       "cross_references": []
     },
     {
@@ -765,6 +781,7 @@
         "פופקורן ושתייה",
         "פופקורן"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/994",
       "cross_references": []
     },
     {
@@ -805,6 +822,7 @@
         "קפה קר",
         "קפה קר גדול"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4226",
       "cross_references": []
     },
     {
@@ -842,6 +860,7 @@
         "חינם",
         "אגודה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4236",
       "cross_references": []
     },
     {
@@ -884,6 +903,7 @@
         "DANLAR",
         "דנלר"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4369",
       "cross_references": []
     },
     {
@@ -928,6 +948,7 @@
         "צ'ילאאוט",
         "קמפוס"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4511",
       "cross_references": []
     },
     {
@@ -971,6 +992,7 @@
         "ASAI",
         "ACAI"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4512",
       "cross_references": []
     },
     {
@@ -1009,6 +1031,7 @@
         "המבורגר",
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/2879",
       "cross_references": []
     },
     {
@@ -1043,6 +1066,7 @@
       "terms": "אוכלים צהריים במחיר משתלם! מנת פסטה לבחירה + שתיה! 🍝🍝🍝 הטבה מסובסדת בקמפוס בר אילן למימוש ביום חמישי בשבוע בלבד! בית קפה פירמידה | בניין 405 *לאחר קבלת הקוד QR, אין אפשרות לקבל החזר כספי על הרכישה",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/3e0e778355509cdc9f2a1042a6692398.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4241",
       "cross_references": []
     },
     {
@@ -1077,6 +1101,7 @@
       "terms": "איזה כריך בא לכם היום? אבוקדו, צהובה, חביתה, טונה או טבעוני. סטודנטים וסטודנטיות באוניברסיטת בר אילן&nbsp; כריך שווה לבחירה + שתיה בפחית&nbsp; הטבה סופר מסובדת למימוש ביום רביעי בלבד!",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/a57ba5c47fc02012ddccc46a476ee6d2.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4242",
       "cross_references": []
     },
     {
@@ -1113,6 +1138,7 @@
         "קוקטייל",
         "מתנה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4339",
       "cross_references": []
     },
     {
@@ -1150,6 +1176,7 @@
         "אוניברסיטה עברית",
         "ירושלים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4261",
       "cross_references": []
     },
     {
@@ -1191,6 +1218,7 @@
         "עברי",
         "שניצל בפיתה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4262",
       "cross_references": []
     },
     {
@@ -1229,6 +1257,7 @@
         "סלט",
         "העברית"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4263",
       "cross_references": []
     },
     {
@@ -1269,6 +1298,7 @@
         "קפוצינו",
         "פורום"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4266",
       "cross_references": []
     },
     {
@@ -1306,6 +1336,7 @@
         "פביולה",
         "מנה עקרית"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4268",
       "cross_references": []
     },
     {
@@ -1342,6 +1373,7 @@
       "tags": [
         "פביולה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4269",
       "cross_references": []
     },
     {
@@ -1384,6 +1416,7 @@
         "סלט",
         "אוכל ושתייה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4270",
       "cross_references": []
     },
     {
@@ -1419,6 +1452,7 @@
         "חינם",
         "אגודה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4283",
       "cross_references": []
     },
     {
@@ -1454,6 +1488,7 @@
         "חינם",
         "אגודה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4284",
       "cross_references": []
     },
     {
@@ -1501,6 +1536,7 @@
         "פאד תאי",
         "סלמון"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4294",
       "cross_references": []
     },
     {
@@ -1541,6 +1577,7 @@
         "מיץ",
         "קופי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3434",
       "cross_references": []
     },
     {
@@ -1581,6 +1618,7 @@
         "פסטה ושתייה",
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3435",
       "cross_references": []
     },
     {
@@ -1616,6 +1654,7 @@
       "terms": "🔥הטבה מסובסדת &nbsp; קפה קר קטן 9 ₪ במקום 14 ₪&nbsp; &nbsp; *תקף רק בסניף אוניברסיטת תל אביב לאחר קבלת הקוד QR, אין אפשרות לקבל החזר כספי על הרכישה &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/64a6122562628ca27fd167635ac5c6c6.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3437",
       "cross_references": []
     },
     {
@@ -1658,6 +1697,7 @@
         "מחשב",
         "נייד"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4502",
       "cross_references": []
     },
     {
@@ -1699,6 +1739,7 @@
         "תיק מחשב",
         "TOSCANA"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4529",
       "cross_references": []
     },
     {
@@ -1740,6 +1781,7 @@
         "תיק מחשב",
         "TOSCANA"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4531",
       "cross_references": []
     },
     {
@@ -1780,6 +1822,7 @@
         "חולון",
         "מוזיאון"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3848",
       "cross_references": []
     },
     {
@@ -1820,6 +1863,7 @@
         "סרט",
         "סרטים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4100",
       "cross_references": []
     },
     {
@@ -1854,6 +1898,7 @@
       "terms": "הפנינג קיץ 2025 - חגיגת מדע אינטראקטיבית לכל המשפחה! 29 ש\"ח במקום 70 ש\"ח ! טכנודע חדרה מזמין אתכם באוגוסט הקרוב לחוות מסע בלתי נשכח דרך מנהרת הזמן, שם תפגשו את המדענים הגדולים בהיסטוריה ותגלו את ההמצאות ששינו את עולמנו! הפעילות תתקיים בין התאריכים&nbsp;1-31/8/25 | שעות הפעילות: 9:00-16:00",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/193c959deba4037336ab9d0b808e3af0.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4192",
       "cross_references": []
     },
     {
@@ -1888,6 +1933,7 @@
       "terms": "הפנינג קיץ 2025 - חגיגת מדע אינטראקטיבית לכל המשפחה! 29 ש\"ח לכרטיס במקום 39 ש\"ח ! טכנודע חדרה מזמין אתכם באוגוסט הקרוב לחוות מסע בלתי נשכח דרך מנהרת הזמן, שם תפגשו את המדענים הגדולים בהיסטוריה ותגלו את ההמצאות ששינו את עולמנו! הפעילות תתקיים בין התאריכים&nbsp;1-31/8/25 | שעות הפעילות: 9:00-16:00",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/80e10d0725b759e3a9bc7cc8b7b4d2b9.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4193",
       "cross_references": []
     },
     {
@@ -1928,6 +1974,7 @@
         "מטמון",
         "טבע"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4211",
       "cross_references": []
     },
     {
@@ -1968,6 +2015,7 @@
         "מטמון",
         "טבע"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4212",
       "cross_references": []
     },
     {
@@ -2008,6 +2056,7 @@
         "טבע",
         "מנוי זוגי פלוס ילד"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4213",
       "cross_references": []
     },
     {
@@ -2049,6 +2098,7 @@
         "מנוי זוגי פלוס ילד",
         "מנוי זוג פלוס 2"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4214",
       "cross_references": []
     },
     {
@@ -2090,6 +2140,7 @@
         "מנוי זוגי פלוס ילד",
         "מנוי זוג פלוס 2"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4215",
       "cross_references": []
     },
     {
@@ -2131,6 +2182,7 @@
         "מנוי זוגי פלוס ילד",
         "מנוי זוג פלוס 2"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4216",
       "cross_references": []
     },
     {
@@ -2172,6 +2224,7 @@
         "מנוי זוגי פלוס ילד",
         "מנוי זוג פלוס 2"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4217",
       "cross_references": []
     },
     {
@@ -2213,6 +2266,7 @@
         "מנוי זוגי פלוס ילד",
         "מנוי זוג פלוס 2"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4222",
       "cross_references": []
     },
     {
@@ -2254,6 +2308,7 @@
         "מנוי זוגי פלוס ילד",
         "מנוי זוג פלוס 2"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4223",
       "cross_references": []
     },
     {
@@ -2295,6 +2350,7 @@
         "מנוי זוגי פלוס ילד",
         "מנוי זוג פלוס 2"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4224",
       "cross_references": []
     },
     {
@@ -2336,6 +2392,7 @@
         "קפה קטן",
         "אייס קפה קטן"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3433",
       "cross_references": []
     },
     {
@@ -2378,6 +2435,7 @@
         "MUST & MAYO",
         "קמפוס"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4073",
       "cross_references": []
     },
     {
@@ -2425,6 +2483,7 @@
         "ד\"ר",
         "פישר"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3603",
       "cross_references": []
     },
     {
@@ -2459,6 +2518,7 @@
       "terms": "אוזניות בלוטות' Bluetooth אלחוטיות נטענות TWS מבית XIAOMI עם מיקרופון מובנה וערכת הטענה מהירה&nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/201da7b4d970b7935b40e731cbc2d0ac.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1691",
       "cross_references": []
     },
     {
@@ -2493,6 +2553,7 @@
       "terms": "שעון טלפון חכם למבוגרים משולב לחצן מצוקה ,אפשרות איתור מיידית ,התרעה במקרה נפילה, ושיחות בחיוג ישיר &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/0926572035f7e30883586290357d0506.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1692",
       "cross_references": []
     },
     {
@@ -2527,6 +2588,7 @@
       "terms": "אוזניות &nbsp;LENOVO סטריאו אלחוטיות עם צג משולבות POWER BANK למוזיקה שיחות וגיימינג &nbsp; &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/01bebb1e05104485f938d526bdf0cc5a.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1693",
       "cross_references": []
     },
     {
@@ -2561,6 +2623,7 @@
       "terms": "מוצר חדש , מתאים במיוחד לקיץ – דגם משודרג &nbsp;!! נגן MP3 לשחייה + רדיו FM נפח 8GB מתאים לשחייה, גלישה &nbsp;ופעילויות ספורט סוללה נטענת !&nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/4d3c75c7714441a0fa6d627129ea1be0.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1695",
       "cross_references": []
     },
     {
@@ -2595,6 +2658,7 @@
       "terms": "עינית לדלת עם מסך ענק 4.3 אינץ + הקלטה בעת זיהוי תנועה דגם &nbsp;2022&nbsp; הסוף לאורחים לא רצויים והפתרון לשקט הנפשי שלך! רוצים לראות בצורה ברורה מי עומד מאחורי הדלת? מוצר בטיחות אידיאלי לכל בית מתאים מאוד לאנשים מבוגרים וילדים עכשיו במחיר מדהים !",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/feb18f526f5f44ad15a7a348ab919d69.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1696",
       "cross_references": []
     },
     {
@@ -2629,6 +2693,7 @@
       "terms": "כולל אינטרנט WIFI ועברית מלאה&nbsp; שעון יד חכם מבית GTI בשילוב של מתכת עם רצועת סיליקון ספורטיבית תומך 4G/3G LTE . עם 2 מצלמות צבעוניות ונגן מוזיקה MP3 מובנה &nbsp; *תומך &nbsp;WhatsApp/FB!!",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/5929990fdca5766ecf75e9b66b6bda40.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1697",
       "cross_references": []
     },
     {
@@ -2663,6 +2728,7 @@
       "terms": "שעון מצוקה SOS למבוגרים &nbsp;,אפשרות איתור מיידית ,עם מד דופק ומד לחץ דם !",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/651c4ecce9b43f6135f45e7cb2c14f52.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1698",
       "cross_references": []
     },
     {
@@ -2697,6 +2763,7 @@
       "terms": "מקרן מולטימדיה אלחוטי ועוצמתי עד 150 אינץ בטכנולוגיית FULL HD &nbsp;LED &nbsp; חיבור אלחוטי לכל סמארטפון מחשב או טאבלט ללא צורך בחוטים + שלט רחוק לשליטה מלאה",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/9979837664fd00176feac829205906a1.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1699",
       "cross_references": []
     },
     {
@@ -2731,6 +2798,7 @@
       "terms": "מעתה יש לכם \"קופסא שחורה\" לרכב שתאפשר לכם לתעד את הדרך בצילום איכותי 4K על כל צרה שלא תבוא בעת הנסיעה&nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/78167217d3b9adb1c7a5216fbc22fc97.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1700",
       "cross_references": []
     },
     {
@@ -2765,6 +2833,7 @@
       "terms": "שעון חכם &nbsp; SMART WATCH &nbsp;אטום במים בעיצוב יוקרתי עם מד דופק מובנה-גוף מתכת ותאימות מושלמת ל IPHONE/ANDROID עברית מלאה",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/0333d4b9b46bfe2b2bf3aa7a52e1d0d1.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1701",
       "cross_references": []
     },
     {
@@ -2799,6 +2868,7 @@
       "terms": "משולב רמקול Bluetooth כניסת USB ונגן MP3 | רמקול עוצמתי במיוחד&nbsp; רדיו רטרו מעוצב , משולב רמקול Bluetooth עוצמתי כניסת USB ונגן MP3 . רדיו נייד משולב עם רמקול עוצמתי בעיצוב רטרו כולל תושבת ייעודית לסמארטפון !&nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/ae2891ee7352f201bbe3adb9d2534fa2.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1702",
       "cross_references": []
     },
     {
@@ -2833,6 +2903,7 @@
       "terms": "זכרון פנימי ענק 4 גיגה 64/32 כולל צג וכפתורי גישה ישירים לנטפליקס וYOUYUBE&nbsp; סטרימר &nbsp;ANDROID TV BOX 8K ULTRA גירסה 11.0 + שלט חכם &nbsp;כולל מגוון תוכנות ונגני מדיה &nbsp; נפח זיכרון ענק לבחירה &nbsp; 64GB/32GB &nbsp;להורדת סרטים ומשחקים ללא חשש!!!!&nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/c1492671ce3a7614e8ce5089a633313d.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1703",
       "cross_references": []
     },
     {
@@ -2868,6 +2939,7 @@
       "terms": "איכות1080 &nbsp;- התקנה פשוטה בקליק - הקלטה עד חודש ימים&nbsp; מצלמת IP ממונעת 360 מעלות אלחוטית נסתרת ברובוט עם מעקב ומשלוח התראות לסמארטפון IPHONE/ANDROID אפשרות הקלטה עד חודש ימים על כרטיס זיכרון ! &nbsp; מצלמת אבטחה IP אלחוטית נסתרת ברובוט &nbsp;HD 1080 עם מעקב צמוד &nbsp;ואפשרות הקלטה על כרטיס זכרון עד חודש ימים + וצפיה מרחוק דרך כל מחשב וסמארטפון &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/5f975d56dd046dd38a723ba7ad992227.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1705",
       "cross_references": []
     },
     {
@@ -2902,6 +2974,7 @@
       "terms": "עברית מלאה-צג מגע ענק 4 אינץ עם 3 עדשות מתכווננות איכות FULL HD 1080. בלעדי תפריט מלא בעברית &nbsp;!! &nbsp;ואפשרות לשימוש כמצלמת אבטחה כאשר הרכב לא בתנועה ! הסוף לתירוצים ודוחות משטרה מיותרים, חובה בכל רכב - מעתה יש לכם \"קופסא שחורה\" ברכב תיעוד את הדרך על כל צרה שלא תבוא בעת הנסיעה - מתאים לכל רכב כולל מוניות אוטובוסים רכבים מסחריים ופרטיים.",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/e5dea66080182a63a3bd7ed298ff55f9.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1706",
       "cross_references": []
     },
     {
@@ -2936,6 +3009,7 @@
       "terms": "עד שבועיים ללא צורך בחיבור לחשמל או כבלי רשת &nbsp; - חדש ! מצלמה אלחוטית סלולארית נטענת &nbsp;4Gנסתרת FULL HD 1080P&nbsp; למעקב הקלטה וצפייה בזמן אמת!",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/9da20e4baa31df9abc3b77d011c4601b.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1707",
       "cross_references": []
     },
     {
@@ -2970,6 +3044,7 @@
       "terms": "מצלמת דרך דו כיוונית FULL HD 1080p &nbsp;עם צג ענק &nbsp;ו-2 מצלמות לתיעוד הנסיעה ולתיעוד פנים הרכב",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/5976ae9db2e80de5cc62cbbed8968dfe.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1708",
       "cross_references": []
     },
     {
@@ -3004,6 +3079,7 @@
       "terms": "-צג מגע ענק 5 אינץ &nbsp;איכות FULL HD 1080 מצלמת דרך פנורמית &nbsp;לרכב &nbsp;360 מעלות עם צג מגע ענק 5 אינץ ! הסוף להפתעות ודוחות משטרה מיותרים, חובה בכל רכב - מעתה יש לכם \"קופסא שחורה\" ברכב תיעוד את הדרך על כל צרה שלא תבוא בעת הנסיעה - מתאים לכל רכב כולל מוניות אוטובוסים רכבים מסחריים ופרטיים.",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/89be2d7acc43bc376630d466ed948f96.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1710",
       "cross_references": []
     },
     {
@@ -3038,6 +3114,7 @@
       "terms": "מצלמת ריגול נסתרת זעירה צבעונית כולל מיקרופון מובנה וסוללה נטענת בשעון מעורר ! הסוף להפתעות לא נעימות ! אפשרות הקלטה רציפה או בעת תנועה בלבד מגיע עם שלט רחוק להפעלה מהירה",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/80af85e56d70751723a6f8ff24136776.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1711",
       "cross_references": []
     },
     {
@@ -3072,6 +3149,7 @@
       "terms": "שעון ספורט חכם ומעוצב &nbsp;עם מד דופק ומד לחץ דם מובנים &nbsp;מד צעדים, מדידת מרחק וקלוריות מתחבר בקלות לסמארטפון באמצעות Bluetooth&nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/61932325889b80918af1badda6fe7129.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1712",
       "cross_references": [
         {
           "tab": "A",
@@ -3113,6 +3191,7 @@
       "terms": "&nbsp;התקנה פשוטה בקליק מצלמת אבטחה IP חכמה ממונעת 360 עם אפשרות הקלטה על כרטיס זכרון/ענן עד חודש ימים + שליטה מרחוק דרך כל מחשב וסמארטפון בלעדי !! התקנה מהירה ללא חיבור לכבלים&nbsp; הקלטה עד חודש ימים - התראה לנייד!",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/82129c7534ac3e34c16cebb777942adf.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1713",
       "cross_references": []
     },
     {
@@ -3147,6 +3226,7 @@
       "terms": "מצלמה נסתרת כולל אפשרות הקלטה וצפייה מרחוק מהסמארטפון&nbsp; עם אפשרות הקלטה עד חודש ימים על כרטיס זיכרון/ענן והתקנה מהירה ללא חיבור לכבלים.",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/68056d6a8e89f2d7d4315ede001616c0.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1714",
       "cross_references": []
     },
     {
@@ -3181,6 +3261,7 @@
       "terms": "הקלטה בעת זיהוי תנועה 2022&nbsp; עינית דיגיטלית מקליטה HD עם מסך צבעוני ענק 3.5 אינץ ופעמון כניסה מובנה הסוף לאורחים לא רצויים והפתרון לשקט הנפשי שלך! רוצים לראות בצורה ברורה מי עומד מאחורי הדלת? מוצר בטיחות אידיאלי לכל בית מתאים מאוד לאנשים מבוגרים וילדים עכשיו במחיר מדהים ! &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/efce1333023f158b04fe4fa4ff0032c2.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1717",
       "cross_references": []
     },
     {
@@ -3215,6 +3296,7 @@
       "terms": "רינג תאורה דגם חדש 2022 ענק 18 אינץ 46 ס\"מ -הדרך המושלמת להיות כוכבי רשת שנראים מצוין !!! &nbsp; &nbsp; תאורת לד ענקית &nbsp;ועוצמתית 46 ס\"מ (18 אינץ') כולל חצובה, תיק נשיאה מהודר, ומעמד לטלפון ! – הפתרון המושלם לבלוגרים מקצועיים תמונות ווידאו באיכות סטודיו מקצועי !!&nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/2822e380c0d283e886fd4b5e60d15718.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1719",
       "cross_references": []
     },
     {
@@ -3249,6 +3331,7 @@
       "terms": "מצלמת אקסטרים אלחוטית לפעילויות ספורט ופנאי עם שליטה באמצעות הסמארטפון. &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/55d04a3d875a651ca5d10be98e5b3eda.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/1721",
       "cross_references": []
     },
     {
@@ -3292,6 +3375,7 @@
         "חשמלי",
         "ניופאן"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3695",
       "cross_references": []
     },
     {
@@ -3333,6 +3417,7 @@
         "אוזניות",
         "ניופאן"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3698",
       "cross_references": []
     },
     {
@@ -3376,6 +3461,7 @@
         "חשמלי",
         "מוצרי חשמל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3708",
       "cross_references": []
     },
     {
@@ -3420,6 +3506,7 @@
         "ניופאן",
         "ניופאן אאוטלט"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3709",
       "cross_references": []
     },
     {
@@ -3458,6 +3545,7 @@
         "מיקסר",
         "מיקסר שולחני"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3710",
       "cross_references": []
     },
     {
@@ -3496,6 +3584,7 @@
         "טלוויזיה",
         "טלוויזיה חכמה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3727",
       "cross_references": []
     },
     {
@@ -3540,6 +3629,7 @@
         "מגהץ",
         "מגהץ אדים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4057",
       "cross_references": []
     },
     {
@@ -3581,6 +3671,7 @@
         "טלוויזיה",
         "מסך"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4063",
       "cross_references": []
     },
     {
@@ -3621,6 +3712,7 @@
         "טלוויזיה",
         "מסך"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4082",
       "cross_references": []
     },
     {
@@ -3662,6 +3754,7 @@
         "ניופאן",
         "טאבון חשמלי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4195",
       "cross_references": [
         {
           "tab": "A",
@@ -3711,6 +3804,7 @@
         "מגהץ",
         "מגהץ קיטור"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4196",
       "cross_references": []
     },
     {
@@ -3752,6 +3846,7 @@
         "מגהץ",
         "קיטורית"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4198",
       "cross_references": []
     },
     {
@@ -3795,6 +3890,7 @@
         "חשמל",
         "מטבח"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4201",
       "cross_references": []
     },
     {
@@ -3837,6 +3933,7 @@
         "מטבח",
         "מטחנת קפה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4203",
       "cross_references": []
     },
     {
@@ -3879,6 +3976,7 @@
         "מטבח",
         "קוצץ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4205",
       "cross_references": []
     },
     {
@@ -3922,6 +4020,7 @@
         "מנקה ספות",
         "טפאל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4370",
       "cross_references": []
     },
     {
@@ -3961,6 +4060,7 @@
         "כיריים",
         "מוצרי חשמל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/478",
       "cross_references": [
         {
           "tab": "A",
@@ -4009,6 +4109,7 @@
         "חשמל",
         "מטבח"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4202",
       "cross_references": []
     },
     {
@@ -4049,6 +4150,7 @@
         "מטבח",
         "מטחנת קפה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4204",
       "cross_references": []
     }
   ],
@@ -4087,6 +4189,7 @@
         "SANO",
         "ראש השנה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/2904",
       "cross_references": [
         {
           "tab": "A",
@@ -4140,6 +4243,7 @@
         "דייט",
         "יום אהבה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3138",
       "cross_references": []
     },
     {
@@ -4178,6 +4282,7 @@
         "תחנת דלק",
         "Ten"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3737",
       "cross_references": []
     },
     {
@@ -4223,6 +4328,7 @@
         "דר פישר",
         "פישר"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3764",
       "cross_references": []
     },
     {
@@ -4257,6 +4363,7 @@
         "DREAM",
         "דרים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4016",
       "cross_references": []
     },
     {
@@ -4294,6 +4401,7 @@
         "GOLF",
         "גולף אנד קו"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4021",
       "cross_references": [
         {
           "tab": "A",
@@ -4354,6 +4462,7 @@
         "יום האהבה",
         "דייט"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4022",
       "cross_references": []
     },
     {
@@ -4402,6 +4511,7 @@
         "יום האהבה",
         "דייט"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4023",
       "cross_references": []
     },
     {
@@ -4434,6 +4544,7 @@
         "תיק למחשב",
         "תיקים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4048",
       "cross_references": []
     },
     {
@@ -4471,6 +4582,7 @@
         "שתייה ואוכל",
         "בית"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4065",
       "cross_references": []
     },
     {
@@ -4502,6 +4614,7 @@
       "terms": "מופעי הלילה מהמשובחים בעולם במוזיאון מגדל דוד 🌙 החיזיון הלילי / מופע המלך דוד - כרטיס כניסה לילד מדי ערב מתעוררות האבנים העתיקות של המצודה לחיים ומתמלאות באור ובצבע ✨ על חומות מגדל דוד מוקרנים דימויים מרהיבים באמצעות טכנולוגיות מתקדמות של וידאו, סאונד ותאורה, המלווים במוזיקה מרגשת ומספרים את סיפורה של ירושלים. לבחירתכם שני מופעים: 🌟 החיזיון הלילי מופע אור־קולי מרהיב שלוקח את הצופים למסע בזמן, בין האירועים והתקופות שעיצבו את פניה של ירושלים. 👑 מופע המלך דוד סיפור חייו של דוד – מהנער הצעיר ועד שהפך למלך ולמנהיג רב־השפעה לדורי דורות. המופעים מתאימים לכל הגילים, למשפחות, לילדים, לתיירים ולישראלים, ואינם תלויים בשפה. 📍 המופעים מתקיימים תחת כיפת השמיים. מומלץ להגיע בלבוש חם לאורך כל השנה. 🎟️ אופן המימוש: לאחר הרכישה יישלח אליכם קוד קופון. את הקוד יש לממש באתר מוזיאון מגדל דוד, תחת האפשרות „מימוש מועדונים”. למעבר לאתר מוזיאון מגדל דוד",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/4270fca96d9ec9621080b52c0cca6e99.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4221",
       "cross_references": []
     },
     {
@@ -4546,6 +4659,7 @@
         "לייף סטייל",
         "דיאטה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4404",
       "cross_references": []
     },
     {
@@ -4590,6 +4704,7 @@
         "לייף סטייל",
         "דיאטה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4405",
       "cross_references": []
     },
     {
@@ -4630,6 +4745,7 @@
         "לייף סטייל",
         "דיאטה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4406",
       "cross_references": []
     },
     {
@@ -4665,6 +4781,7 @@
         "תחביבים",
         "משחקים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4408",
       "cross_references": []
     },
     {
@@ -4710,6 +4827,7 @@
         "ילדים",
         "מתנפחים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4427",
       "cross_references": []
     },
     {
@@ -4755,6 +4873,7 @@
         "ילדים",
         "מתנפחים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4428",
       "cross_references": []
     },
     {
@@ -4798,6 +4917,7 @@
         "משפחה",
         "הטבות קיץ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4462",
       "cross_references": [
         {
           "tab": "A",
@@ -4846,6 +4966,7 @@
         "פארק",
         "הטבות קיץ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4463",
       "cross_references": [
         {
           "tab": "A",
@@ -4887,6 +5008,7 @@
         "בירה אלכסנדר",
         "מונדיאל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4471",
       "cross_references": []
     },
     {
@@ -4922,6 +5044,7 @@
         "מובילנד",
         "קולנוע"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4494",
       "cross_references": []
     },
     {
@@ -4960,6 +5083,7 @@
         "גלישה",
         "איסים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4498",
       "cross_references": []
     },
     {
@@ -4998,6 +5122,7 @@
         "כרטיס",
         "כרטיס כניסה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4509",
       "cross_references": []
     },
     {
@@ -5035,6 +5160,7 @@
         "קניות",
         "בית"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3792",
       "cross_references": []
     },
     {
@@ -5067,6 +5193,7 @@
         "פסטה",
         "פורום קפה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4265",
       "cross_references": []
     },
     {
@@ -5099,6 +5226,7 @@
         "פיצות",
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4337",
       "cross_references": []
     },
     {
@@ -5139,6 +5267,7 @@
         "פורים",
         "נשים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4360",
       "cross_references": [
         {
           "tab": "A",
@@ -5180,6 +5309,7 @@
         "נספרסו",
         "100"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4363",
       "cross_references": []
     },
     {
@@ -5213,6 +5343,7 @@
         "נספרסו",
         "100"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4364",
       "cross_references": []
     },
     {
@@ -5247,6 +5378,7 @@
         "נספרסו",
         "100"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4365",
       "cross_references": []
     },
     {
@@ -5286,6 +5418,7 @@
         "IL MAKIAGE",
         "שובר"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4376",
       "cross_references": [
         {
           "tab": "A",
@@ -5325,6 +5458,7 @@
         "משלוחים",
         "בית"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4421",
       "cross_references": []
     },
     {
@@ -5363,6 +5497,7 @@
         "מונדיאל",
         "אלכסנדר"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4468",
       "cross_references": []
     },
     {
@@ -5401,6 +5536,7 @@
         "בירה אלכסנדר",
         "מונדיאל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4469",
       "cross_references": []
     },
     {
@@ -5439,6 +5575,7 @@
         "בירה אלכסנדר",
         "מונדיאל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4470",
       "cross_references": []
     },
     {
@@ -5478,6 +5615,7 @@
         "VICTORY",
         "מזון"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/698",
       "cross_references": []
     },
     {
@@ -5518,6 +5656,7 @@
         "כרטיס יחיד לסרט",
         "כרטיס"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3791",
       "cross_references": []
     },
     {
@@ -5555,6 +5694,7 @@
         "מבלים וחוסכים",
         "סינמה סיטי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3794",
       "cross_references": []
     },
     {
@@ -5580,6 +5720,7 @@
       "tags": [
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1624",
       "cross_references": []
     },
     {
@@ -5610,6 +5751,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;MANGO ומותגים שווים נוספים כמו : SPOTIFAY, ADIDAS,NIKE מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/ed6855c011f50a438184e007e790169b.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3938",
       "cross_references": []
     },
     {
@@ -5640,6 +5782,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;NIKE ומותגים שווים נוספים כמו : ADIDAS, MANGO,SPOTIFAY ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/7b917defe6ab5d27182a6c8a432b72c4.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3939",
       "cross_references": []
     },
     {
@@ -5670,6 +5813,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב30 יורו בלבד !!! הכולל את &nbsp;SPOTIFAY ומותגים שווים נוספים כמו : ADIDAS,MANGO,NIKE ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/f3c616a4907934fb6b82e39497bdaef3.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3940",
       "cross_references": []
     },
     {
@@ -5700,6 +5844,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;FOOT LOKER ומותגים שווים נוספים כמו : H&amp;M, MANGO,SPOTIFAY ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/5f6e381d87e0b1ff1ebe5751a20bb010.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3941",
       "cross_references": [
         {
           "tab": "A",
@@ -5737,6 +5882,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את FOOT LOKER ומותגים שווים נוספים כמו : ADIDAS,H&amp;M,ASUS ועוד שלל מותגים מובילים !!! מימוש ההטבה : רכישת השובר באתר UNIQ קבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק ) כניסה דרך הקישור שמופיע במייל על מנת לממש את השובר בקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכן בחר בכרטיס המתנה הרצוי והוסף אותו לסל לאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו. שימו ❤️ לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/214299fc069ec990836fe970e3e7d74f.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3942",
       "cross_references": [
         {
           "tab": "A",
@@ -5774,6 +5920,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;FOOT LOKER ומותגים שווים נוספים כמו : PRIMARK,H&amp;M,MANGO ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/d1c36a8b8cc43fc7bc8338fdfa9becd4.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3944",
       "cross_references": [
         {
           "tab": "A",
@@ -5811,6 +5958,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;ADIDAS ומותגים שווים נוספים כמו : ASUS,FOOT LOKER,H&amp;M ועוד שלל מותגים מובילים !!! מימוש ההטבה : רכישת השובר באתר UNIQ קבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק ) כניסה דרך הקישור שמופיע במייל על מנת לממש את השובר בקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכן בחר בכרטיס המתנה הרצוי והוסף אותו לסל לאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו. שימו ❤️ לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp; &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/7e061c466965576166412304d212a1dd.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3945",
       "cross_references": []
     },
     {
@@ -5841,6 +5989,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את ASOS ומותגים שווים נוספים כמו : ADIDAS,FOOT LOKER,H&amp;M ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp; &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/fbb73b946b758f897e8cae9b1fbfaafb.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3946",
       "cross_references": []
     },
     {
@@ -5871,6 +6020,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;H&amp;M ומותגים שווים נוספים כמו : ADIDAS,FOOT LOKER,ASOS ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp; &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/3191713793adc8e72d2e9eee82e57b85.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3947",
       "cross_references": []
     },
     {
@@ -5901,6 +6051,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;H&amp;M ומותגים שווים נוספים כמו : ADIDAS,FOOT LOKER,MANGO ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://mab.to/t/MqUmRKCXy2c/eu1",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/53544e3e86e8461ba5cf8001072a6434.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3949",
       "cross_references": []
     },
     {
@@ -5931,6 +6082,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;ADIDAS ומותגים שווים נוספים כמו : ASUS,FOOT LOKER,H&amp;M ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/7e061c466965576166412304d212a1dd.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3950",
       "cross_references": []
     },
     {
@@ -5961,6 +6113,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;ASUS ומותגים שווים נוספים כמו : ADIDAS,FOOT LOKER,H&amp;M ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/c1308da0c32da5c742a52fbcb45aacba.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3953",
       "cross_references": []
     },
     {
@@ -5991,6 +6144,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את FOOT LOKER ומותגים שווים נוספים כמו : ADIDAS,H&amp;M,ASUS ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/cf4f530d006b0e02fb25741e3de79973.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3955",
       "cross_references": [
         {
           "tab": "A",
@@ -6028,6 +6182,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;H&amp;M ומותגים שווים נוספים כמו : FOOT LOKER,MANGO,PRIMARK ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/b4159d60695026b81c17aee0080e428e.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3956",
       "cross_references": []
     },
     {
@@ -6058,6 +6213,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;PRIMARK ומותגים שווים נוספים כמו : FOOT LOKER,MANGO,H&amp;M מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/44b96288c26c3bd4daf975d9c453514e.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3957",
       "cross_references": []
     },
     {
@@ -6088,6 +6244,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב -30 יורו בלבד !!! הכולל את רשת Lastminute ומותגים שווים נוספים כמו : PLAYSTATION ,MANGO,Decathlon ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/df25ccb508d315a8ebb8a46131ac55ed.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3958",
       "cross_references": []
     },
     {
@@ -6118,6 +6275,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;MANGO ומותגים שווים נוספים כמו : FOOT LOKER,H&amp;M,PRIMARK ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/58133c2248015a3ddd2c318b689c3128.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3959",
       "cross_references": []
     },
     {
@@ -6148,6 +6306,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב -30 יורו בלבד !!! הכולל את MANGO ומותגים שווים נוספים כמו : Decathlon ,PLAYSTATION,Lastminute ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/099205801723722c9b7788c1999c7f84.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3960",
       "cross_references": []
     },
     {
@@ -6178,6 +6337,7 @@
       "terms": "שובר מולטי על סך 40 יורו &nbsp;ב -30 יורו בלבד !!! הכולל את &nbsp;PLAYSTATION ומותגים שווים נוספים כמו : Decathlon ,MANGO,Lastminute ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/ab93e0bd126b4d5900c85b59ceeb0e54.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3961",
       "cross_references": []
     },
     {
@@ -6208,6 +6368,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב -30 יורו בלבד !!! הכולל את &nbsp;Decathlon ומותגים שווים נוספים כמו : Lastminute,MANGO,PLAYSTATION ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/89546dc5877b33cc32c3af0f66c7f593.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3962",
       "cross_references": []
     },
     {
@@ -6238,6 +6399,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב -30 יורו בלבד !!! הכולל את &nbsp;MANGO ומותגים שווים נוספים כמו : FOOT LOKER,H&amp;M,PRIMARK ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/58133c2248015a3ddd2c318b689c3128.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3964",
       "cross_references": []
     },
     {
@@ -6268,6 +6430,7 @@
       "terms": "שובר מולטי על סך 40 יורו &nbsp;ב -30 יורו בלבד !!! הכולל את &nbsp;H&amp;M ומותגים שווים נוספים כמו : MANGO,Yves Rocher,PRIMARK ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/de50fc2d4deb34ed51002d24020b0c96.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3965",
       "cross_references": []
     },
     {
@@ -6298,6 +6461,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב -30 יורו בלבד !!! הכולל את &nbsp;PRIMARK ומותגים שווים נוספים כמו : MANGO,H&amp;M,yves rocher ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/d1c016b47cefe665340faf2cbfbae37a.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3966",
       "cross_references": []
     },
     {
@@ -6328,6 +6492,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב- 30 יורו בלבד !!!הכולל את &nbsp;yves rocher ומותגים שווים נוספים כמו : MANGO,PRIMARK,H&amp;M ועוד שלל מותגים מובילים !!! מימוש ההטבה : רכישת השובר באתר UNIQ קבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק ) כניסה דרך הקישור שמופיע במייל על מנת לממש את השובר בקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכן בחר בכרטיס המתנה הרצוי והוסף אותו לסל לאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו. שימו ❤️ לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/cb7aece712f155b5c66e4c87234ef612.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3967",
       "cross_references": []
     },
     {
@@ -6358,6 +6523,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;H&amp;M ומותגים שווים נוספים כמו : ADIDAS,MANGO,PRIMARK ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/b4159d60695026b81c17aee0080e428e.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3969",
       "cross_references": []
     },
     {
@@ -6388,6 +6554,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;ADIDAS ומותגים שווים נוספים כמו : H&amp;M,MANGO,PRIMARK ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/26af09044602f92d7ddd71f960fff52c.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3972",
       "cross_references": []
     },
     {
@@ -6418,6 +6585,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;MANGO ומותגים שווים נוספים כמו : H&amp;M,ADIDAS,PRIMARK ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/4a27ffa34ab4d6115d02de30b41c9d43.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3973",
       "cross_references": []
     },
     {
@@ -6448,6 +6616,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;PRIMARK ומותגים שווים נוספים כמו : H&amp;M,ADIDAS,MANGO ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/11b6a8b0180e0bb277fd36af34f5e5f2.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3974",
       "cross_references": []
     },
     {
@@ -6478,6 +6647,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;PRIMARK ומותגים שווים נוספים כמו : H&amp;M,ADIDAS,MANGO ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/11b6a8b0180e0bb277fd36af34f5e5f2.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3976",
       "cross_references": []
     },
     {
@@ -6508,6 +6678,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;MANGO ומותגים שווים נוספים כמו : H&amp;M,ADIDAS,PRIMARK עוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/1021653177fa83c7a2bf83b2a2d40086.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3977",
       "cross_references": []
     },
     {
@@ -6538,6 +6709,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;ADIDAS ומותגים שווים נוספים כמו : H&amp;M,MANGO,PRIMARK ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/26af09044602f92d7ddd71f960fff52c.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3978",
       "cross_references": []
     },
     {
@@ -6568,6 +6740,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;H&amp;M ומותגים שווים נוספים כמו : ADIDAS,MANGO,PRIMARK ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://mab.to/t/MqUmRKCXy2c/eu1",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/1d68e5d441be0ac7e83cd25901a61b79.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3979",
       "cross_references": []
     },
     {
@@ -6602,6 +6775,7 @@
         "סאפורה",
         "ספורה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3980",
       "cross_references": []
     },
     {
@@ -6632,6 +6806,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב-30 יורו בלבד !!! הכולל את &nbsp;Decathlon &nbsp;ומותגים שווים נוספים כמו : Sephora ,H&amp;M,Mango ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/132d5e8658122422cfe6d1dd0232e8f3.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3981",
       "cross_references": []
     },
     {
@@ -6662,6 +6837,7 @@
       "terms": "שובר מולטי על סך 150 ש\"ח &nbsp;ב -112 ש\"ח בלבד !!! הכולל את &nbsp;H&amp;M &nbsp;ומותגים שווים נוספים כמו : Sephora ,Decathlon,Mango ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/2ac56239bc5f43a68e53c52eb16220cb.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3982",
       "cross_references": []
     },
     {
@@ -6692,6 +6868,7 @@
       "terms": "שובר מולטי על סך 40 יורו ב-30 יורו בלבד !!! הכולל את &nbsp;Mango &nbsp;ומותגים שווים נוספים כמו : Sephora ,Decathlon,H&amp;M ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/c14160e40889fc86f8c4e4251b3c29aa.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3983",
       "cross_references": []
     },
     {
@@ -6722,6 +6899,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;Decathlon ומותגים שווים נוספים כמו : FOOT LOKER,H&amp;M,Mango ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/132d5e8658122422cfe6d1dd0232e8f3.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3985",
       "cross_references": []
     },
     {
@@ -6752,6 +6930,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;Mango &nbsp;ומותגים שווים נוספים כמו : FOOT LOKER,Decathlon,H&amp;M ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp; &nbsp; &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/c14160e40889fc86f8c4e4251b3c29aa.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3986",
       "cross_references": []
     },
     {
@@ -6782,6 +6961,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;H&amp;M &nbsp;ומותגים שווים נוספים כמו : FOOT LOKER,Decathlon,Mango ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/ce92742d9dc914fa88677e63ecefd4f8.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3987",
       "cross_references": []
     },
     {
@@ -6812,6 +6992,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;FOOT LOKER &nbsp;ומותגים שווים נוספים כמו : H&amp;M,Decathlon,Mango ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/f19c5676e755aeb4f3e94066b1b097b6.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3988",
       "cross_references": [
         {
           "tab": "A",
@@ -6849,6 +7030,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;FOOT LOKER &nbsp;ומותגים שווים נוספים כמו : ADIDAS,NIKE,Decathlon ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp; &nbsp; &nbsp; &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/f19c5676e755aeb4f3e94066b1b097b6.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3989",
       "cross_references": [
         {
           "tab": "A",
@@ -6886,6 +7068,7 @@
       "terms": "שובר מולטי בשווי 40 יורו ב - 30 יורו בלבד !!! הכולל את &nbsp;Decathlon &nbsp;ומותגים שווים נוספים כמו : FOOT LOKER,NIKE,ADIDAS ועוד שלל מותגים מובילים !!!&nbsp; מימוש ההטבה : רכישת השובר באתר UNIQקבלת מייל עם שובר מתנה ומס' הקוד ( יכול להגיע לאחר מס' דק )כניסה דרך הקישור שמופיע במייל על מנת לממש את השוברבקישור יופיעו ההוראות הבאות : הקלד את הקוד בן 12 הספרות שקיבלת בקישור שיופיע לאחר מכןבחר בכרטיס המתנה הרצוי והוסף אותו לסללאחר מימוש כרטיס המתנה תקבל קישור כדי לראות אותו.שימו ❤️&nbsp; לאחר רכישת השובר - תקבלו הודעת SMS עם סרטון הסבר על מימוש השובר, רק לאחר מכן (עד כחצי שעה) יגיע אליכם המייל עם שובר המתנה! סרטון הסבר : https://bit.ly/3ZS9rFE &nbsp;",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/1b44ba8f73ea1554226d980d8ce2c3d3.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/3990",
       "cross_references": []
     },
     {
@@ -6919,6 +7102,7 @@
         "American Eagle",
         "אמריקן איגל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4005",
       "cross_references": [
         {
           "tab": "A",
@@ -6960,6 +7144,7 @@
         "מזון",
         "פיצה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4007",
       "cross_references": []
     },
     {
@@ -6993,6 +7178,7 @@
         "פוט לוקר",
         "FOOT LOKER"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4008",
       "cross_references": [
         {
           "tab": "A",
@@ -7034,6 +7220,7 @@
         "Sephora",
         "סאפורה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4142",
       "cross_references": []
     },
     {
@@ -7066,6 +7253,7 @@
         "תיק גב למחשב",
         "תיק גב למחשב HUFFER"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3611",
       "cross_references": []
     },
     {
@@ -7099,6 +7287,7 @@
         "תיק למחשב",
         "תיק גב למחשב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3613",
       "cross_references": []
     },
     {
@@ -7132,6 +7321,7 @@
         "תיק למחשב",
         "תיק גב למחשב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3614",
       "cross_references": []
     },
     {
@@ -7161,6 +7351,7 @@
         "תיק",
         "תיקים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3904",
       "cross_references": []
     },
     {
@@ -7190,6 +7381,7 @@
         "תיק",
         "תיקים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3905",
       "cross_references": []
     },
     {
@@ -7219,6 +7411,7 @@
         "תיק",
         "תיקים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3906",
       "cross_references": []
     },
     {
@@ -7248,6 +7441,7 @@
         "תיק",
         "תיקים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/3907",
       "cross_references": [
         {
           "tab": "A",
@@ -7287,6 +7481,7 @@
         "תיק מחשב",
         "מחשב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4047",
       "cross_references": []
     },
     {
@@ -7317,6 +7512,7 @@
         "תיק מחשב",
         "תיק גב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4049",
       "cross_references": []
     },
     {
@@ -7357,6 +7553,7 @@
         "יום האהבה",
         "ט\"ו באב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4108",
       "cross_references": []
     },
     {
@@ -7397,6 +7594,7 @@
         "טעימות",
         "תלפיות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4208",
       "cross_references": []
     },
     {
@@ -7427,6 +7625,7 @@
       "terms": "מופעי הלילה מהמשובחים בעולם במוזיאון מגדל דוד 🌙 החיזיון הלילי / מופע המלך דוד - כרטיס כניסה למבוגר מדי ערב מתעוררות האבנים העתיקות של המצודה לחיים ומתמלאות באור ובצבע ✨ על חומות מגדל דוד מוקרנים דימויים מרהיבים באמצעות טכנולוגיות מתקדמות של וידאו, סאונד ותאורה, המלווים במוזיקה מרגשת ומספרים את סיפורה של ירושלים. לבחירתכם שני מופעים: 🌟 החיזיון הלילי מופע אור־קולי מרהיב שלוקח את הצופים למסע בזמן, בין האירועים והתקופות שעיצבו את פניה של ירושלים. 👑 מופע המלך דוד סיפור חייו של דוד – מהנער הצעיר ועד שהפך למלך ולמנהיג רב־השפעה לדורי דורות. המופעים מתאימים לכל הגילים, למשפחות, לילדים, לתיירים ולישראלים, ואינם תלויים בשפה. 📍 המופעים מתקיימים תחת כיפת השמיים. מומלץ להגיע בלבוש חם לאורך כל השנה. 🎟️ אופן המימוש: לאחר הרכישה יישלח אליכם קוד קופון. את הקוד יש לממש באתר מוזיאון מגדל דוד, תחת האפשרות „מימוש מועדונים”. למעבר לאתר מוזיאון מגדל דוד",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/2c3d48319eac94e28dab224800ef8147.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4220",
       "cross_references": []
     },
     {
@@ -7469,6 +7668,7 @@
         "בילויים",
         "תרבות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4229",
       "cross_references": []
     },
     {
@@ -7504,6 +7704,7 @@
         "בורגר",
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4053",
       "cross_references": []
     },
     {
@@ -7535,6 +7736,7 @@
         "פיצות",
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4293",
       "cross_references": []
     },
     {
@@ -7575,6 +7777,7 @@
         "מגש",
         "מגש משפחתי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4326",
       "cross_references": []
     },
     {
@@ -7615,6 +7818,7 @@
         "מגש",
         "מגש משפחתי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4327",
       "cross_references": []
     },
     {
@@ -7655,6 +7859,7 @@
         "מגש",
         "מגש משפחתי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4328",
       "cross_references": []
     },
     {
@@ -7695,6 +7900,7 @@
         "דומינו'ס",
         "דומינוס"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4329",
       "cross_references": []
     },
     {
@@ -7735,6 +7941,7 @@
         "דומינו'ס",
         "דומינוס"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4330",
       "cross_references": []
     },
     {
@@ -7775,6 +7982,7 @@
         "מגש",
         "מגש משפחתי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4331",
       "cross_references": []
     },
     {
@@ -7815,6 +8023,7 @@
         "מגש",
         "מגש משפחתי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4334",
       "cross_references": []
     },
     {
@@ -7855,6 +8064,7 @@
         "מגש",
         "מגש משפחתי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4335",
       "cross_references": []
     },
     {
@@ -7886,6 +8096,7 @@
         "פיצות",
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4336",
       "cross_references": []
     },
     {
@@ -7925,6 +8136,7 @@
         "פלטה",
         "פלטת פיצוחים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4341",
       "cross_references": []
     },
     {
@@ -7964,6 +8176,7 @@
         "פלטה",
         "פלטת פיצוחים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4342",
       "cross_references": []
     },
     {
@@ -8003,6 +8216,7 @@
         "פלטה",
         "פלטת פיצוחים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4343",
       "cross_references": []
     },
     {
@@ -8030,6 +8244,7 @@
       "terms": "🌸 מארז כביסכל – ניקיון מושלם לבית 🌸מארז משתלם במיוחד הכולל מגוון מוצרי ניקיון איכותיים בניחוח רוז מפנק – כל מה שצריך לבית נקי, ריחני ומטופח במקום אחד! 🧴 מה כולל כל מארז?דויפאק 2 ליטר – 2 יחידותנוזל כביסה 2 ליטר – 1 יחידהנוזל רצפות 2 ליטר – 2 יחידותנוזל כלים רוז – 2 יחידותמארז מגבונים רוז – 1 יחידהמבשם 750 מ\"ל רוז – 1 יחידה🎁 מתנה: דויפאק TO GO רוז 0.5 ליטר – 1 יחידה🚚 משלוח חינם עד הבית 📅 בתוקף עד 31.12.2026",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/a30fed97185e9c086d2c4f3565ed549b.jpeg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4372",
       "cross_references": []
     },
     {
@@ -8057,6 +8272,7 @@
       "terms": "🌸 מארז כביסכל – ניקיון מושלם לבית 🌸מארז משתלם במיוחד הכולל מגוון מוצרי ניקיון איכותיים בניחוח ארומטי – כל מה שצריך לבית נקי, ריחני ומטופח במקום אחד! 🧴 מה כולל כל מארז?דויפאק 2 ליטר – 2 יחידותנוזל כביסה 2 ליטר – 1 יחידהנוזל רצפות 2 ליטר – 2 יחידותנוזל כלים ארומטי – 2 יחידותמארז מגבונים ארומטי – 1 יחידהמבשם 750 מ\"ל ארומטי – 1 יחידה🎁 מתנה: דויפאק TO GO &nbsp;0.5 ליטר – 1 יחידה🚚 משלוח חינם עד הבית 📅 בתוקף עד 31.12.2026",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/f75bbb38003fde3273c9d0167d4ce82f.jpeg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4373",
       "cross_references": []
     },
     {
@@ -8084,6 +8300,7 @@
       "terms": "🌸 מארז כביסכל – ניקיון מושלם לבית 🌸מארז משתלם במיוחד הכולל מגוון מוצרי ניקיון איכותיים בניחוח מאסק Flowers – כל מה שצריך לבית נקי, ריחני ומטופח במקום אחד! 🧴 מה כולל כל מארז?דויפאק 2 ליטר – 2 יחידותנוזל כביסה 2 ליטר – 1 יחידהנוזל רצפות 2 ליטר – 2 יחידותנוזל כלים מאסק – 2 יחידותמארז מגבונים מאסק – 1 יחידהמבשם 750 מ\"ל מאסק – 1 יחידה🎁 מתנה: דויפאק TO GO 0.5 ליטר – 1 יחידה🚚 משלוח חינם עד הבית 📅 בתוקף עד 31.12.2026",
       "image_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/adaa2464f37abd2e4edf389b5782b2a4.jpeg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/product/4374",
       "cross_references": []
     },
     {
@@ -8124,6 +8341,7 @@
         "ריח",
         "מארזי ריח"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4375",
       "cross_references": []
     },
     {
@@ -8162,6 +8380,7 @@
         "מיטה",
         "מיטה זוגית"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4507",
       "cross_references": []
     },
     {
@@ -8207,6 +8426,7 @@
         "מגבת",
         "סט מגבות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/product/4508",
       "cross_references": []
     }
   ],
@@ -8240,6 +8460,7 @@
       "terms": "הנחה של 10% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/8a39bf43234c4f7d1c869d7d44b09885.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1025",
       "cross_references": []
     },
     {
@@ -8277,6 +8498,7 @@
         "יוגורט",
         "גלידה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/138",
       "cross_references": []
     },
     {
@@ -8308,6 +8530,7 @@
       "terms": "הנחה של 15% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/uniq-club/original/jO7sUhUIJt1QbZYa4xgH3NER34cGf9lBbyqu43Ys.jpeg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/180",
       "cross_references": []
     },
     {
@@ -8341,6 +8564,7 @@
         "מרכז נא לגעת",
         "נא לגעת"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/191",
       "cross_references": []
     },
     {
@@ -8377,6 +8601,7 @@
         "ירקות",
         "שוק"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/241",
       "cross_references": []
     },
     {
@@ -8411,6 +8636,7 @@
         "שניצל",
         "מסעדה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/422",
       "cross_references": []
     },
     {
@@ -8446,6 +8672,7 @@
         "חדרי בריחה",
         "חיפה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/576",
       "cross_references": []
     },
     {
@@ -8489,6 +8716,7 @@
         "יקב",
         "טוליפ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/586",
       "cross_references": []
     },
     {
@@ -8526,6 +8754,7 @@
         "איטלקי",
         "ELLESSE"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/943",
       "cross_references": [
         {
           "tab": "A",
@@ -8570,6 +8799,7 @@
         "מוצרי חשמל לבית",
         "הקונטיינר"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1069",
       "cross_references": [
         {
           "tab": "A",
@@ -8616,6 +8846,7 @@
         "ציוד משרדי",
         "מעמד חיוב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1107",
       "cross_references": []
     },
     {
@@ -8655,6 +8886,7 @@
         "ספיט",
         "פיט"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1122",
       "cross_references": []
     },
     {
@@ -8694,6 +8926,7 @@
         "רכב",
         "SOLO"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1236",
       "cross_references": []
     },
     {
@@ -8738,6 +8971,7 @@
         "דייט",
         "יום אהבה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1316",
       "cross_references": []
     },
     {
@@ -8773,6 +9007,7 @@
         "שואבי אבק",
         "הנחה במעמד חיוב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1445",
       "cross_references": []
     },
     {
@@ -8814,6 +9049,7 @@
         "טכניון",
         "חיפה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1563",
       "cross_references": [
         {
           "tab": "A",
@@ -8867,6 +9103,7 @@
         "חוויה קולינרית",
         "יקב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1567",
       "cross_references": []
     },
     {
@@ -8901,6 +9138,7 @@
         "אוכל יווני",
         "מסעדה יוונית"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1573",
       "cross_references": []
     },
     {
@@ -8930,6 +9168,7 @@
         "קרביץ",
         "מוצרי כתיבה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1606",
       "cross_references": []
     },
     {
@@ -8964,6 +9203,7 @@
         "פוקי שופ",
         "פוקי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1614",
       "cross_references": []
     },
     {
@@ -8994,6 +9234,7 @@
       "terms": "הנחה של 15% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/1f5c891d91788725a3f3214b8276991a.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1687",
       "cross_references": [
         {
           "tab": "A",
@@ -9031,6 +9272,7 @@
       "terms": "הנחה של 15% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/983f79efbb23175c62d50f8e003fea84.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1688",
       "cross_references": []
     },
     {
@@ -9061,6 +9303,7 @@
       "terms": "הנחה של 15% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/fed39fb1b3446e1c1f4bfe082b24e156.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1689",
       "cross_references": [
         {
           "tab": "A",
@@ -9098,6 +9341,7 @@
       "terms": "הנחה של 15% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/53ddfe5472b13ced866662ac3b837a17.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1690",
       "cross_references": [
         {
           "tab": "A",
@@ -9135,6 +9379,7 @@
       "terms": "הנחה של 15% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/475fb9bbc1ab388057265da7b5883e23.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1692",
       "cross_references": [
         {
           "tab": "A",
@@ -9172,6 +9417,7 @@
       "terms": "הנחה של 15% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/7f63e416b41b80f42031cfdb9459626f.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1694",
       "cross_references": [
         {
           "tab": "A",
@@ -9210,6 +9456,7 @@
       "terms": "הנחה של 15% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/d8cdabe69aa7f1cbf91e6b650dea7e2c.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1696",
       "cross_references": [
         {
           "tab": "A",
@@ -9248,6 +9495,7 @@
       "terms": "הנחה של 15% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/f36d1be1733844b19cfea7e9a0de3521.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1697",
       "cross_references": [
         {
           "tab": "A",
@@ -9285,6 +9533,7 @@
       "terms": "הנחה של 15% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/0d8ec78c3be3739807903cd0151f92a3.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1698",
       "cross_references": [
         {
           "tab": "A",
@@ -9325,6 +9574,7 @@
         "גיפט קארד כללי נטעו",
         "נטען"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1725",
       "cross_references": []
     },
     {
@@ -9359,6 +9609,7 @@
         "חבילות גלישה בחול",
         "ESIMO"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1736",
       "cross_references": []
     },
     {
@@ -9394,6 +9645,7 @@
         "טיסה",
         "סוכן ביטוח"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1747",
       "cross_references": [
         {
           "tab": "A",
@@ -9444,6 +9696,7 @@
         "מעמד",
         "חיוב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1748",
       "cross_references": []
     },
     {
@@ -9483,6 +9736,7 @@
         "פיצות",
         "בירות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1749",
       "cross_references": [
         {
           "tab": "A",
@@ -9532,6 +9786,7 @@
         "אהבה",
         "דייט"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1754",
       "cross_references": [
         {
           "tab": "A",
@@ -9565,6 +9820,7 @@
       "terms": "הנחה של החזר כספי על קניות באינטרנט ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/260c970337adf3f890f8e3fa86009c35.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/574",
       "cross_references": []
     },
     {
@@ -9598,6 +9854,7 @@
         "קיץ",
         "הטבות קיץ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1835",
       "cross_references": []
     },
     {
@@ -9631,6 +9888,7 @@
         "הטבות קיץ",
         "ילדים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1836",
       "cross_references": []
     },
     {
@@ -9668,6 +9926,7 @@
         "קיץ",
         "הטבות קיץ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1838",
       "cross_references": []
     },
     {
@@ -9709,6 +9968,7 @@
         "קיץ",
         "הטבות קיץ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1839",
       "cross_references": []
     },
     {
@@ -9743,6 +10003,7 @@
         "קיץ",
         "הטבות קיץ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1840",
       "cross_references": []
     },
     {
@@ -9782,6 +10043,7 @@
         "קיץ",
         "הטבות קיץ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1843",
       "cross_references": []
     },
     {
@@ -9816,6 +10078,7 @@
         "קופי סנטר",
         "בית דפוס"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1852",
       "cross_references": [
         {
           "tab": "A",
@@ -9853,6 +10116,7 @@
       "terms": "הנחה של 11% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/24d989ac6709ca8883d577242734de9a.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1854",
       "cross_references": []
     },
     {
@@ -9883,6 +10147,7 @@
       "terms": "הנחה של 25% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/a0513f4c2b3fa39b6633c172fe7af5a8.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1855",
       "cross_references": []
     },
     {
@@ -9913,6 +10178,7 @@
       "terms": "הנחה של 5% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/ffdf6398e3e83bcc36c897f07c762030.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1856",
       "cross_references": []
     },
     {
@@ -9943,6 +10209,7 @@
       "terms": "הנחה של 3% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/921c66bb56294718575a27a457e5cb63.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1858",
       "cross_references": []
     },
     {
@@ -9973,6 +10240,7 @@
       "terms": "הנחה של 4% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/5dba24913704f02f3f32b01d5de3f631.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1859",
       "cross_references": []
     },
     {
@@ -10003,6 +10271,7 @@
       "terms": "הנחה של 4% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/8eff8dd05139117c0ea0fc4911f56e8c.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1860",
       "cross_references": []
     },
     {
@@ -10033,6 +10302,7 @@
       "terms": "הנחה של 5% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/bfd92d130d3aa18b3f0b2bdd62167b88.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1861",
       "cross_references": []
     },
     {
@@ -10063,6 +10333,7 @@
       "terms": "הנחה של 5% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/504d4c25cf5238a72f7b9eff1252900c.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1862",
       "cross_references": []
     },
     {
@@ -10093,6 +10364,7 @@
       "terms": "הנחה של 4% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/38f8e8b0f767775ba2bdffcb605a6045.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1864",
       "cross_references": []
     },
     {
@@ -10123,6 +10395,7 @@
       "terms": "הנחה של 5% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/a0cdebd76c92206d734b9dc793d47bd5.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/141",
       "cross_references": [
         {
           "tab": "A",
@@ -10167,6 +10440,7 @@
         "סושי תל אביב",
         "סושיה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/276",
       "cross_references": []
     },
     {
@@ -10207,6 +10481,7 @@
         "סנדלים",
         "בגדים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/601",
       "cross_references": []
     },
     {
@@ -10240,6 +10515,7 @@
         "ארטרה",
         "ארטרה גלידה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/125",
       "cross_references": []
     },
     {
@@ -10274,6 +10550,7 @@
         "bradex",
         "ריהוט"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/620",
       "cross_references": []
     },
     {
@@ -10304,6 +10581,7 @@
       "terms": "הנחה של 10% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/b68bd2c73fb85339d342c9125aa57c53.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/693",
       "cross_references": []
     },
     {
@@ -10339,6 +10617,7 @@
         "BEER SHOPE",
         "הנחה במעמד חיוב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/699",
       "cross_references": []
     },
     {
@@ -10373,6 +10652,7 @@
         "אימון",
         "כושר"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1296",
       "cross_references": []
     },
     {
@@ -10413,6 +10693,7 @@
         "אלכוהול",
         "בילויים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1299",
       "cross_references": []
     },
     {
@@ -10444,6 +10725,7 @@
       "terms": "הנחה של 5% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/b3727fa56809f81f9e98e9928fb7164b.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1301",
       "cross_references": []
     },
     {
@@ -10480,6 +10762,7 @@
         "מסעדת קורה",
         "מסעדת KURA"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1435",
       "cross_references": []
     },
     {
@@ -10518,6 +10801,7 @@
         "ברודצקי",
         "רעננה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1462",
       "cross_references": [
         {
           "tab": "A",
@@ -10555,6 +10839,7 @@
       "terms": "הנחה של 10% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/235d55f8a6bc11c1c9ced527eabe22ed.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1465",
       "cross_references": []
     },
     {
@@ -10587,6 +10872,7 @@
       "tags": [
         "תכשיטים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1605",
       "cross_references": []
     },
     {
@@ -10618,6 +10904,7 @@
         "בורגר",
         "המבורגר M32"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1671",
       "cross_references": []
     },
     {
@@ -10659,6 +10946,7 @@
         "יום האהבה",
         "אהבה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1751",
       "cross_references": []
     },
     {
@@ -10690,6 +10978,7 @@
       "tags": [
         "קורס הכיהנ"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1759",
       "cross_references": []
     },
     {
@@ -10729,6 +11018,7 @@
         "גגה",
         "ראשון לציון"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1783",
       "cross_references": []
     },
     {
@@ -10764,6 +11054,7 @@
         "ציוד ספורט",
         "ספורט"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1784",
       "cross_references": [
         {
           "tab": "A",
@@ -10810,6 +11101,7 @@
         "מסעדה",
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1787",
       "cross_references": []
     },
     {
@@ -10846,6 +11138,7 @@
         "חומוס",
         "חומוס מדאמס"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1788",
       "cross_references": []
     },
     {
@@ -10884,6 +11177,7 @@
         "סושי נגיסה",
         "נגיסה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1789",
       "cross_references": []
     },
     {
@@ -10921,6 +11215,7 @@
         "קנבס",
         "הדפסה על קנבס"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1790",
       "cross_references": []
     },
     {
@@ -10954,6 +11249,7 @@
         "קומיקס",
         "חנות קומיקס"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1794",
       "cross_references": []
     },
     {
@@ -10989,6 +11285,7 @@
         "מעדניית רוזנברג",
         "רוזנברג מטבח ישראלי"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1796",
       "cross_references": []
     },
     {
@@ -11027,6 +11324,7 @@
         "אוניברסיטה",
         "מעמד חיוב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1823",
       "cross_references": []
     },
     {
@@ -11067,6 +11365,7 @@
         "עברית",
         "ירושלים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1824",
       "cross_references": []
     },
     {
@@ -11106,6 +11405,7 @@
         "בר אילן",
         "קמפוס בר אילן"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1827",
       "cross_references": []
     },
     {
@@ -11149,6 +11449,7 @@
         "אוכל",
         "שתייה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1829",
       "cross_references": []
     },
     {
@@ -11186,6 +11487,7 @@
         "שינקין",
         "על האש"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1833",
       "cross_references": []
     },
     {
@@ -11220,6 +11522,7 @@
         "הכל למחשב",
         "אלטרוניקה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/4426",
       "cross_references": []
     },
     {
@@ -11262,6 +11565,7 @@
         "טבע",
         "צמחוני"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1834",
       "cross_references": []
     },
     {
@@ -11302,6 +11606,7 @@
         "DIOR",
         "CHANEL"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1848",
       "cross_references": []
     },
     {
@@ -11339,6 +11644,7 @@
         "בילויים",
         "ברים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1865",
       "cross_references": []
     },
     {
@@ -11371,6 +11677,7 @@
       "tags": [
         "באר שבע"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/727",
       "cross_references": []
     },
     {
@@ -11400,6 +11707,7 @@
         "פוד אפי",
         "פוד אפיל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1816",
       "cross_references": []
     },
     {
@@ -11428,6 +11736,7 @@
         "באר שבע",
         "היבואן"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1817",
       "cross_references": []
     },
     {
@@ -11466,6 +11775,7 @@
         "אוכל ושתייה",
         "אוניברסיטת בן גוריון"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1818",
       "cross_references": []
     },
     {
@@ -11503,6 +11813,7 @@
         "PADEL CLUB",
         "ספורט"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1867",
       "cross_references": []
     },
     {
@@ -11530,6 +11841,7 @@
       "terms": "הנחה של 40 ש\"ח במקום 50 ש\"ח ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/fe35e85d5685828455453694a275a2f3.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1199",
       "cross_references": []
     },
     {
@@ -11570,6 +11882,7 @@
         "ביסקול",
         "BISCHOOL"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1821",
       "cross_references": []
     },
     {
@@ -11595,6 +11908,7 @@
       "terms": "הנחה של הטבות מיוחדות לביטוחים בחו\"ל  ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/76eb272bf8dae0539a75b604b37ebb65.jpg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1432",
       "cross_references": []
     },
     {
@@ -11627,6 +11941,7 @@
         "מקדונלד'ס",
         "Mcdonald's"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1593",
       "cross_references": []
     },
     {
@@ -11658,6 +11973,7 @@
       "tags": [
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1625",
       "cross_references": []
     },
     {
@@ -11689,6 +12005,7 @@
       "tags": [
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1652",
       "cross_references": []
     },
     {
@@ -11720,6 +12037,7 @@
       "tags": [
         "קניות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1660",
       "cross_references": []
     },
     {
@@ -11751,6 +12069,7 @@
       "tags": [
         "קניות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1664",
       "cross_references": []
     },
     {
@@ -11782,6 +12101,7 @@
       "tags": [
         "אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1667",
       "cross_references": []
     },
     {
@@ -11811,6 +12131,7 @@
       "terms": "הנחה של 4% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/08a45833ce613b7f2f5fb4a449b86039.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1857",
       "cross_references": []
     },
     {
@@ -11840,6 +12161,7 @@
       "terms": "הנחה של 4% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/8fa7ab72d76c8d8c994f6fae001aa62b.png",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1863",
       "cross_references": []
     },
     {
@@ -11872,6 +12194,7 @@
         "מורפיקס",
         "אנגלית"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/700",
       "cross_references": []
     },
     {
@@ -11903,6 +12226,7 @@
         "קורקינט",
         "נסיעות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1355",
       "cross_references": []
     },
     {
@@ -11938,6 +12262,7 @@
         "גרפיקה",
         "ציוד ללימודים\\"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1423",
       "cross_references": [
         {
           "tab": "A",
@@ -11978,6 +12303,7 @@
         "ספרי לימוד",
         "חומר לימודים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1565",
       "cross_references": []
     },
     {
@@ -12010,6 +12336,7 @@
         "גרביים",
         "גרביים מגניבות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1597",
       "cross_references": []
     },
     {
@@ -12041,6 +12368,7 @@
       "tags": [
         "פקטורי 54"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1803",
       "cross_references": [
         {
           "tab": "A",
@@ -12077,6 +12405,7 @@
       "terms": "הנחה של 5% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/uniq-club/original/9LdGYD64Vbnh5D8xDO2iICY359bG9LurVzFNG7tk.jpeg",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/952",
       "cross_references": []
     },
     {
@@ -12113,6 +12442,7 @@
         "BRAON",
         "מחנה יהודה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/953",
       "cross_references": []
     },
     {
@@ -12149,6 +12479,7 @@
         "דנים",
         "בר אוכל"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/228",
       "cross_references": []
     },
     {
@@ -12184,6 +12515,7 @@
         "בורגרים",
         "רמת אביב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1436",
       "cross_references": [
         {
           "tab": "A",
@@ -12227,6 +12559,7 @@
         "גשר",
         "בילויים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1443",
       "cross_references": []
     },
     {
@@ -12263,6 +12596,7 @@
         "קמפוס",
         "תל אביב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1772",
       "cross_references": []
     },
     {
@@ -12301,6 +12635,7 @@
         "משחקים",
         "ספייקבול"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1776",
       "cross_references": []
     },
     {
@@ -12335,6 +12670,7 @@
         "הנחה",
         "תל אביב"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1812",
       "cross_references": []
     },
     {
@@ -12368,6 +12704,7 @@
         "בורגר",
         "המבורגרים"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1572",
       "cross_references": [
         {
           "tab": "A",
@@ -12404,6 +12741,7 @@
       "terms": "הנחה של 10% ניתנת באופן אוטומטי במעמד החיוב בחשבון האשראי למשלמים בכרטיס UNIQ.",
       "logo_url": "https://uniq-club-shop.s3.eu-west-1.amazonaws.com/images/4a15a0a09ae5f4b140b1fec7e8a3ed83.jfif",
       "tags": [],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1021",
       "cross_references": []
     },
     {
@@ -12437,6 +12775,7 @@
         "חבילה",
         "תקשורת"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1502",
       "cross_references": []
     },
     {
@@ -12471,6 +12810,7 @@
         "סלקום TV",
         "אינטרנט"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1503",
       "cross_references": []
     },
     {
@@ -12508,6 +12848,7 @@
         "תקשורת",
         "neptucom"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1681",
       "cross_references": []
     },
     {
@@ -12552,6 +12893,7 @@
         "למו",
         "לנו"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1773",
       "cross_references": []
     },
     {
@@ -12586,6 +12928,7 @@
         "רוזאוס",
         "Roseus"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1398",
       "cross_references": []
     },
     {
@@ -12620,6 +12963,7 @@
         "מזרן",
         "מיטה"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1493",
       "cross_references": [
         {
           "tab": "A",
@@ -12661,6 +13005,7 @@
         "פתרון",
         "פתרונות"
       ],
+      "direct_url": "https://www.uniq-club.co.il/benefit/1815",
       "cross_references": []
     }
   ]

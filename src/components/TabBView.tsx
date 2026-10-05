@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrapedItemDeal, TabKey } from '../types';
 import { BadgePill } from './BadgePill';
 import { CrossReferenceTag } from './CrossReferenceTag';
-import { ShoppingBag, Tag, ChevronLeft } from 'lucide-react';
+import { ShoppingBag, Tag, ExternalLink } from 'lucide-react';
 
 interface TabBViewProps {
   deals: ScrapedItemDeal[];
@@ -31,6 +31,7 @@ export const TabBView: React.FC<TabBViewProps> = ({
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {deals.map((deal) => {
         const isHighlighted = highlightedId === deal.id || highlightedId === deal.original_id;
+        const directUrl = deal.direct_url || `https://www.uniq-club.co.il/product/${deal.original_id}`;
 
         return (
           <div
@@ -58,11 +59,22 @@ export const TabBView: React.FC<TabBViewProps> = ({
                 )}
               </div>
 
-              {/* Title & Chevron */}
-              <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors mb-2 flex items-start justify-between gap-2">
-                <span>{deal.name}</span>
-                <ChevronLeft className="w-4 h-4 text-slate-300 group-hover:text-emerald-600 group-hover:-translate-x-1 transition-all shrink-0 mt-1" />
-              </h3>
+              {/* Title & Direct Site Link */}
+              <div className="flex items-start justify-between gap-2 mb-2">
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug">
+                  {deal.name}
+                </h3>
+                <a
+                  href={directUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="p-1.5 rounded-lg text-slate-400 hover:text-emerald-700 hover:bg-emerald-50 transition-colors shrink-0"
+                  title={`פתח את ${deal.name} באתר UNIQ`}
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
 
               {/* Pricing Box if available */}
               {(deal.price !== undefined && deal.price !== null) && (

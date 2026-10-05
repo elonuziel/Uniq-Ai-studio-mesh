@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrapedBillingDiscount, TabKey } from '../types';
 import { BadgePill } from './BadgePill';
 import { CrossReferenceTag } from './CrossReferenceTag';
-import { Zap, Tag, ChevronLeft, CheckCircle2 } from 'lucide-react';
+import { Zap, Tag, ExternalLink, CheckCircle2 } from 'lucide-react';
 
 interface TabDViewProps {
   discounts: ScrapedBillingDiscount[];
@@ -47,6 +47,7 @@ export const TabDView: React.FC<TabDViewProps> = ({
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {discounts.map((item) => {
           const isHighlighted = highlightedId === item.id || highlightedId === item.original_id;
+          const directUrl = item.direct_url || `https://www.uniq-club.co.il/benefit/${item.original_id}`;
 
           return (
             <div
@@ -73,11 +74,22 @@ export const TabDView: React.FC<TabDViewProps> = ({
                   </span>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-base font-bold text-slate-900 group-hover:text-amber-800 transition-colors mb-2 flex items-start justify-between gap-2">
-                  <span>{item.name}</span>
-                  <ChevronLeft className="w-4 h-4 text-slate-300 group-hover:text-amber-600 group-hover:-translate-x-1 transition-all shrink-0 mt-1" />
-                </h3>
+                {/* Title & Direct Site Link */}
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <h3 className="text-base font-bold text-slate-900 group-hover:text-amber-800 transition-colors leading-snug">
+                    {item.name}
+                  </h3>
+                  <a
+                    href={directUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="p-1.5 rounded-lg text-slate-400 hover:text-amber-700 hover:bg-amber-50 transition-colors shrink-0"
+                    title={`פתח את ${item.name} באתר UNIQ`}
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
 
                 {/* Badges */}
                 <div className="flex flex-wrap gap-1.5 my-2.5">
