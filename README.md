@@ -1,15 +1,15 @@
 # UNIQ Club Benefits & Discounts Portal
 
-[![Deploy to GitHub Pages](https://github.com/ElonUziel/uniq-card-discounts/actions/workflows/deploy.yml/badge.svg)](https://github.com/ElonUziel/uniq-card-discounts/actions/workflows/deploy.yml)
-[![Weekly Scraper Automation](https://github.com/ElonUziel/uniq-card-discounts/actions/workflows/scrape.yml/badge.svg)](https://github.com/ElonUziel/uniq-card-discounts/actions/workflows/scrape.yml)
+[![Deploy to GitHub Pages](https://github.com/elonuziel/Uniq-Ai-studio-mesh/actions/workflows/deploy.yml/badge.svg)](https://github.com/elonuziel/Uniq-Ai-studio-mesh/actions/workflows/deploy.yml)
+[![Weekly Scraper Automation](https://github.com/elonuziel/Uniq-Ai-studio-mesh/actions/workflows/scrape.yml/badge.svg)](https://github.com/elonuziel/Uniq-Ai-studio-mesh/actions/workflows/scrape.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > A modern, responsive portal tailored for Hebrew (RTL) that consolidates, filters, and cross-references all benefits, discounts, and vouchers for the UNIQ / MAX Executive Club credit card.
 
 ## 🌐 Live Website (GitHub Pages)
 
-- **GitHub Pages Live Site:** [https://elonuziel.github.io/uniq-card-discounts/](https://elonuziel.github.io/uniq-card-discounts/)
-- **GitHub Repository:** [https://github.com/ElonUziel/uniq-card-discounts](https://github.com/ElonUziel/uniq-card-discounts)
+- **GitHub Pages Live Site:** [https://elonuziel.github.io/Uniq-Ai-studio-mesh/](https://elonuziel.github.io/Uniq-Ai-studio-mesh/)
+- **GitHub Repository:** [https://github.com/elonuziel/Uniq-Ai-studio-mesh](https://github.com/elonuziel/Uniq-Ai-studio-mesh)
 
 ---
 
@@ -126,8 +126,8 @@ The portal categorizes all UNIQ club discounts into 4 distinct tabs:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ElonUziel/uniq-card-discounts.git
-cd uniq-card-discounts
+git clone https://github.com/elonuziel/Uniq-Ai-studio-mesh.git
+cd Uniq-Ai-studio-mesh
 
 # Install JavaScript dependencies
 npm install
