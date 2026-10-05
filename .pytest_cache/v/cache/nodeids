@@ -1,6 +1,7 @@
 [
   "tests/test_scraper_data.py::test_cross_referencing",
   "tests/test_scraper_data.py::test_files_exist",
+  "tests/test_scraper_data.py::test_no_html_entities_in_scraped_data",
   "tests/test_scraper_data.py::test_rechargeable_benefits_structure",
   "tests/test_scraper_data.py::test_rechargeable_benefits_structure_and_metadata",
   "tests/test_scraper_data.py::test_scraped_benefits_tabs_integrity",

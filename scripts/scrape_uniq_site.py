@@ -9,6 +9,7 @@ import urllib.request
 import json
 import re
 import os
+import html
 from datetime import datetime
 
 GRAPHQL_URL = "https://admin.uniq-club.co.il/api/graphql"
@@ -29,8 +30,18 @@ def gql_request(query, variables=None):
 def clean_html(text):
     if not text:
         return ""
-    text = re.sub(r'<(?:br|/p|/div)>', ' ', text, flags=re.IGNORECASE)
+    # Convert breaks to spaces
+    text = re.sub(r'<(?:br\s*/?|/p|/div|/li)>', ' ', text, flags=re.IGNORECASE)
+    text = re.sub(r'<li[^>]*>', '• ', text, flags=re.IGNORECASE)
+    # Strip HTML tags
     text = re.sub(r'<[^>]+>', '', text)
+    # Unescape HTML entities (&nbsp;, &amp;, &quot;, &#39;, &gt;, &lt;, etc.)
+    text = html.unescape(text)
+    # Replace explicit &nbsp; and Unicode non-breaking spaces \xa0
+    text = text.replace('\xa0', ' ').replace('&nbsp;', ' ').replace('&nbsp', ' ')
+    # Clean zero-width chars
+    text = re.sub(r'[\u200b\u200e\u200f\ufeff]', '', text)
+    # Normalize multiple whitespace
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 

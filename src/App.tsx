@@ -17,7 +17,8 @@ import { TabBView } from './components/TabBView';
 import { TabCView } from './components/TabCView';
 import { TabDView } from './components/TabDView';
 import { DetailModal } from './components/DetailModal';
-import { Loader2, RefreshCw, ExternalLink, ShieldCheck, Sparkles, X } from 'lucide-react';
+import { isDataStale, getDaysDifference } from './utils/dateUtils';
+import { Loader2, RefreshCw, ExternalLink, ShieldCheck, Sparkles, X, AlertTriangle } from 'lucide-react';
 
 const INITIAL_FILTER: FilterState = {
   searchQuery: '',
@@ -45,6 +46,8 @@ export const App: React.FC = () => {
     item: any;
     type: 'rechargeable' | 'deal' | 'brand' | 'billing';
   } | null>(null);
+
+  const [showStaleBanner, setShowStaleBanner] = useState<boolean>(true);
 
   // Load datasets on mount
   useEffect(() => {
@@ -340,6 +343,10 @@ export const App: React.FC = () => {
     );
   }
 
+  const siteDate = scrapedData?.metadata.last_updated || scrapedData?.metadata.scraped_at;
+  const isSiteDataStale = isDataStale(siteDate, 10);
+  const siteDaysOld = getDaysDifference(siteDate);
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
       {/* Top Navbar */}
@@ -350,10 +357,36 @@ export const App: React.FC = () => {
           setFilter({ ...filter, selectedCategory: '' });
         }}
         counts={counts}
-        siteLastUpdated={scrapedData?.metadata.last_updated || scrapedData?.metadata.scraped_at}
+        siteLastUpdated={siteDate}
         pdfLastUpdated={rechargeableData?.metadata.last_updated || rechargeableData?.metadata.last_verified}
         pdfHash={rechargeableData?.metadata.source_pdf_hash}
       />
+
+      {/* Subtle Data Staleness Warning Banner (For scraped site data only > 10 days) */}
+      {isSiteDataStale && showStaleBanner && (
+        <aside
+          data-testid="stale-site-data-banner"
+          className="bg-amber-50/95 border-b border-amber-200/90 py-2 px-4 text-xs text-amber-950 transition-all shadow-2xs"
+          role="alert"
+        >
+          <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2">
+              <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+              <span>
+                <strong>לתשומת לבך:</strong> נתוני אתר UNIQ (לשוניות ב&apos;, ג&apos; ו-ד&apos;) עודכנו לאחרונה לפני <strong>{siteDaysOld} ימים</strong> (מעל 10 ימים). ייתכן שחלק מהמבצעים או המחירים באתר הרשמי השתנו מאז. נתוני ספח כרטיס נטען 15% (לשונית א&apos;) מתעדכנים בנפרד.
+              </span>
+            </div>
+            <button
+              onClick={() => setShowStaleBanner(false)}
+              className="p-1 rounded-lg hover:bg-amber-100 text-amber-700 hover:text-amber-900 transition-colors shrink-0 cursor-pointer"
+              title="סגור הודעה"
+              aria-label="סגור הודעת אזהרה"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </div>
+        </aside>
+      )}
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">

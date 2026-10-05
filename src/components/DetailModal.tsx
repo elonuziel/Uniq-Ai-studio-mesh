@@ -2,6 +2,7 @@ import React from 'react';
 import { TabKey } from '../types';
 import { BadgePill } from './BadgePill';
 import { CrossReferenceTag } from './CrossReferenceTag';
+import { formatDetailsText } from '../utils/textUtils';
 import { X, ShieldAlert, Sparkles, ExternalLink, Tag } from 'lucide-react';
 
 interface DetailModalProps {
@@ -116,8 +117,17 @@ export const DetailModal: React.FC<DetailModalProps> = ({
         {/* Notes / Terms */}
         {(item.notes || item.terms) && (
           <div className="mb-5 text-xs leading-relaxed text-slate-700 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-            <span className="block font-bold text-slate-900 mb-1">פרטים נוספים:</span>
-            <p>{item.notes || item.terms}</p>
+            <span className="block font-bold text-slate-900 mb-2">פרטים נוספים:</span>
+            <div className="space-y-2">
+              {formatDetailsText(item.notes || item.terms).map((paragraph, idx) => (
+                <p
+                  key={idx}
+                  className={paragraph.startsWith('•') ? 'pr-2 font-medium text-slate-800' : 'text-slate-700'}
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         )}
 

@@ -187,4 +187,38 @@ describe('UNIC Club Portal - Unit & Integration Tests', () => {
       expect(modalLink).toHaveAttribute('href', 'https://www.uniq-club.co.il/product/2982');
     });
   });
+
+  it('cleans HTML entities and &nbsp; from terms and additional details', async () => {
+    render(<App />);
+
+    await waitFor(() => {
+      expect(screen.getByText(/מועדון UNIQ/i)).toBeInTheDocument();
+    });
+
+    // Switch to Tab B: הטבות לפי מוצר
+    const tabBButton = screen.getByRole('button', { name: /הטבות לפי מוצר/i });
+    fireEvent.click(tabBButton);
+
+    // Search for "מגש פירות"
+    const searchInput = screen.getByPlaceholderText(/חיפוש לפי שם מותג/i);
+    fireEvent.change(searchInput, { target: { value: 'מגש פירות' } });
+
+    await waitFor(() => {
+      expect(screen.getByText(/מגש פירות עם יין \/ עוגה/i)).toBeInTheDocument();
+    });
+
+    // Open detail modal
+    fireEvent.click(screen.getByText(/מגש פירות עם יין \/ עוגה/i));
+
+    await waitFor(() => {
+      expect(screen.getByText(/פרטים נוספים:/i)).toBeInTheDocument();
+    });
+
+    // Verify raw &nbsp; is NOT present in document
+    const modalContent = document.body.innerHTML;
+    expect(modalContent).not.toContain('&amp;nbsp;');
+    expect(modalContent).not.toContain('&nbsp;');
+    // Verify phone number is preserved
+    expect(screen.getAllByText(/03-6018282/).length).toBeGreaterThan(0);
+  });
 });

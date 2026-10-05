@@ -87,3 +87,16 @@ def test_cross_referencing():
 
     total_refs_a = sum(len(b.get("cross_references", [])) for b in rec_data["brands"])
     assert total_refs_a >= 1, "Tab A should have cross references to overlapping brands"
+
+def test_no_html_entities_in_scraped_data():
+    with open(SCRAPED_PATH, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    
+    for category_key in ["item_deals", "brand_discounts", "billing_stage_discounts"]:
+        for item in data[category_key]:
+            terms = item.get("terms", "")
+            name = item.get("name", "")
+            assert "&nbsp;" not in terms, f"Found &nbsp; in {item['id']} terms: {terms}"
+            assert "&nbsp;" not in name, f"Found &nbsp; in {item['id']} name: {name}"
+            assert "&amp;" not in terms, f"Found &amp; in {item['id']} terms: {terms}"
+

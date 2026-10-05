@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrapedBillingDiscount, TabKey } from '../types';
 import { BadgePill } from './BadgePill';
 import { CrossReferenceTag } from './CrossReferenceTag';
+import { cleanHtmlText } from '../utils/textUtils';
 import { Zap, Tag, ExternalLink, CheckCircle2 } from 'lucide-react';
 
 interface TabDViewProps {
@@ -102,7 +103,7 @@ export const TabDView: React.FC<TabDViewProps> = ({
                 {item.terms && (
                   <p className="text-xs text-slate-600 line-clamp-2 mt-2 pt-2 border-t border-slate-100 flex items-start gap-1">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                    <span>{item.terms}</span>
+                    <span>{cleanHtmlText(item.terms)}</span>
                   </p>
                 )}
               </div>

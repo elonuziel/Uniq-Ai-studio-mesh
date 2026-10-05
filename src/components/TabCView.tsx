@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrapedBrandDiscount, TabKey } from '../types';
 import { BadgePill } from './BadgePill';
 import { CrossReferenceTag } from './CrossReferenceTag';
+import { cleanHtmlText } from '../utils/textUtils';
 import { Store, Tag, ExternalLink } from 'lucide-react';
 
 interface TabCViewProps {
@@ -88,7 +89,7 @@ export const TabCView: React.FC<TabCViewProps> = ({
               {/* Terms Preview */}
               {brand.terms && (
                 <p className="text-xs text-slate-600 line-clamp-2 mt-2 pt-2 border-t border-slate-100">
-                  {brand.terms}
+                  {cleanHtmlText(brand.terms)}
                 </p>
               )}
             </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrapedItemDeal, TabKey } from '../types';
 import { BadgePill } from './BadgePill';
 import { CrossReferenceTag } from './CrossReferenceTag';
+import { cleanHtmlText } from '../utils/textUtils';
 import { ShoppingBag, Tag, ExternalLink } from 'lucide-react';
 
 interface TabBViewProps {
@@ -100,7 +101,7 @@ export const TabBView: React.FC<TabBViewProps> = ({
               {/* Description preview */}
               {deal.terms && (
                 <p className="text-xs text-slate-600 line-clamp-2 mt-2 pt-2 border-t border-slate-100">
-                  {deal.terms}
+                  {cleanHtmlText(deal.terms)}
                 </p>
               )}
             </div>
