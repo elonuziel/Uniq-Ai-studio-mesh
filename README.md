@@ -2,6 +2,7 @@
 
 [![Deploy to GitHub Pages](https://github.com/ElonUziel/uniq-card-discounts/actions/workflows/deploy.yml/badge.svg)](https://github.com/ElonUziel/uniq-card-discounts/actions/workflows/deploy.yml)
 [![Weekly Scraper Automation](https://github.com/ElonUziel/uniq-card-discounts/actions/workflows/scrape.yml/badge.svg)](https://github.com/ElonUziel/uniq-card-discounts/actions/workflows/scrape.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > A modern, responsive portal tailored for Hebrew (RTL) that consolidates, filters, and cross-references all benefits, discounts, and vouchers for the UNIQ / MAX Executive Club credit card.
 
@@ -211,4 +212,5 @@ This will:
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is open source and available under the [MIT License](LICENSE).  
+Copyright (c) 2026 Elon Uziel.
