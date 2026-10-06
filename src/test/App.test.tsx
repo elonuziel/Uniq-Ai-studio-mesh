@@ -290,4 +290,33 @@ describe('UNIC Club Portal - Unit & Integration Tests', () => {
       expect(screen.getByText(/מגש פירות עם יין \/ עוגה/i)).toBeInTheDocument();
     });
   });
+
+  it('keeps light mode as default and toggles dark mode via the top button', async () => {
+    localStorage.clear();
+    document.documentElement.classList.remove('dark');
+
+    render(<App />);
+
+    await waitFor(() => {
+      expect(screen.getByText(/מועדון UNIQ/i)).toBeInTheDocument();
+    });
+
+    // Verify light mode is default
+    expect(document.documentElement.classList.contains('dark')).toBe(false);
+    const darkModeToggle = screen.getByTestId('dark-mode-toggle');
+    expect(darkModeToggle).toBeInTheDocument();
+    expect(screen.getByText(/מצב כהה/i)).toBeInTheDocument();
+
+    // Toggle dark mode on
+    fireEvent.click(darkModeToggle);
+    expect(document.documentElement.classList.contains('dark')).toBe(true);
+    expect(localStorage.getItem('theme')).toBe('dark');
+    expect(screen.getByText(/מצב בהיר/i)).toBeInTheDocument();
+
+    // Toggle back to light mode
+    fireEvent.click(darkModeToggle);
+    expect(document.documentElement.classList.contains('dark')).toBe(false);
+    expect(localStorage.getItem('theme')).toBe('light');
+    expect(screen.getByText(/מצב כהה/i)).toBeInTheDocument();
+  });
 });

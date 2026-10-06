@@ -51,6 +51,29 @@ export const App: React.FC = () => {
 
   const [showStaleBanner, setShowStaleBanner] = useState<boolean>(true);
 
+  // Dark mode state: LIGHT mode is strictly default unless explicitly toggled
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem('theme') === 'dark';
+    } catch {
+      return false;
+    }
+  });
+
+  useEffect(() => {
+    try {
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+    } catch {
+      // ignore in environments without localStorage
+    }
+  }, [isDarkMode]);
+
   // Load datasets on mount
   useEffect(() => {
     const fetchData = async () => {
@@ -380,11 +403,11 @@ export const App: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 text-slate-800 p-4">
-        <div className="p-4 bg-white rounded-3xl shadow-xl border border-slate-200 flex flex-col items-center text-center max-w-sm">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 p-4">
+        <div className="p-4 bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center max-w-sm">
           <Loader2 className="w-10 h-10 text-pink-600 animate-spin mb-4" />
-          <h2 className="text-lg font-bold text-slate-900 mb-1">טוען מאגר הטבות UNIQ...</h2>
-          <p className="text-xs text-slate-500">
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-1">טוען מאגר הטבות UNIQ...</h2>
+          <p className="text-xs text-slate-500 dark:text-slate-400">
             מאמת ספח PDF כרטיס נטען 15% וטוען הטבות עדכניות מהאתר
           </p>
         </div>
@@ -394,12 +417,12 @@ export const App: React.FC = () => {
 
   if (loadError) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 text-slate-800 p-4">
-        <div className="p-6 bg-white rounded-3xl shadow-xl border border-red-200 flex flex-col items-center text-center max-w-md">
-          <div className="w-12 h-12 rounded-full bg-red-100 text-red-600 flex items-center justify-center mb-4">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 p-4">
+        <div className="p-6 bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-red-200 dark:border-red-900/50 flex flex-col items-center text-center max-w-md">
+          <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 flex items-center justify-center mb-4">
             <RefreshCw className="w-6 h-6" />
           </div>
-          <h2 className="text-lg font-bold text-slate-900 mb-2">{loadError}</h2>
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{loadError}</h2>
           <button
             onClick={() => window.location.reload()}
             className="px-4 py-2 bg-pink-600 text-white rounded-xl text-xs font-bold hover:bg-pink-700 transition-colors"
@@ -416,7 +439,7 @@ export const App: React.FC = () => {
   const siteDaysOld = getDaysDifference(siteDate);
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
+    <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors">
       {/* Top Navbar */}
       <Navbar
         activeTab={activeTab}
@@ -432,25 +455,27 @@ export const App: React.FC = () => {
         onToggleSearchAllTabs={() =>
           setFilter({ ...filter, searchAllTabs: !filter.searchAllTabs })
         }
+        isDarkMode={isDarkMode}
+        onToggleDarkMode={() => setIsDarkMode((prev) => !prev)}
       />
 
       {/* Subtle Data Staleness Warning Banner (For scraped site data only > 10 days) */}
       {isSiteDataStale && showStaleBanner && (
         <aside
           data-testid="stale-site-data-banner"
-          className="bg-amber-50/95 border-b border-amber-200/90 py-2 px-4 text-xs text-amber-950 transition-all shadow-2xs"
+          className="bg-amber-50/95 dark:bg-amber-950/40 border-b border-amber-200/90 dark:border-amber-800/80 py-2 px-4 text-xs text-amber-950 dark:text-amber-200 transition-all shadow-2xs"
           role="alert"
         >
           <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
             <div className="flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+              <AlertTriangle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
               <span>
                 <strong>לתשומת לבך:</strong> נתוני אתר UNIQ (לשוניות ב&apos;, ג&apos; ו-ד&apos;) עודכנו לאחרונה לפני <strong>{siteDaysOld} ימים</strong> (מעל 10 ימים). ייתכן שחלק מהמבצעים או המחירים באתר הרשמי השתנו מאז. נתוני ספח כרטיס נטען 15% (לשונית א&apos;) מתעדכנים בנפרד.
               </span>
             </div>
             <button
               onClick={() => setShowStaleBanner(false)}
-              className="p-1 rounded-lg hover:bg-amber-100 text-amber-700 hover:text-amber-900 transition-colors shrink-0 cursor-pointer"
+              className="p-1 rounded-lg hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-700 dark:text-amber-300 hover:text-amber-900 transition-colors shrink-0 cursor-pointer"
               title="סגור הודעה"
               aria-label="סגור הודעת אזהרה"
             >
@@ -464,12 +489,12 @@ export const App: React.FC = () => {
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
         {/* Active Cross-Reference Notification Toast */}
         {crossRefNotification && (
-          <div className="bg-pink-50 border border-pink-200 rounded-2xl p-3.5 mb-5 flex items-center justify-between gap-3 text-xs md:text-sm animate-in fade-in slide-in-from-top-2">
-            <div className="flex items-center gap-2 text-pink-950 font-medium">
-              <Sparkles className="w-4 h-4 text-pink-600 shrink-0" />
+          <div className="bg-pink-50 dark:bg-pink-950/40 border border-pink-200 dark:border-pink-800 rounded-2xl p-3.5 mb-5 flex items-center justify-between gap-3 text-xs md:text-sm animate-in fade-in slide-in-from-top-2">
+            <div className="flex items-center gap-2 text-pink-950 dark:text-pink-200 font-medium">
+              <Sparkles className="w-4 h-4 text-pink-600 dark:text-pink-400 shrink-0" />
               <span>
                 הגעת דרך הצלבה מ{crossRefNotification.fromTab} עבור:{' '}
-                <strong className="text-pink-700 font-bold">&quot;{crossRefNotification.brandName}&quot;</strong>
+                <strong className="text-pink-700 dark:text-pink-300 font-bold">&quot;{crossRefNotification.brandName}&quot;</strong>
               </span>
             </div>
             <button
@@ -506,11 +531,11 @@ export const App: React.FC = () => {
 
         {/* Smart Cross-Tab Discovery Prompt */}
         {otherTabMatchesCount > 0 && !filter.searchAllTabs && (
-          <div className="bg-gradient-to-r from-pink-50 via-rose-50 to-indigo-50 border border-pink-200/90 rounded-2xl p-4 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs md:text-sm animate-in fade-in shadow-xs">
-            <div className="flex items-center gap-2.5 text-slate-800">
-              <Sparkles className="w-4 h-4 text-pink-600 shrink-0" />
+          <div className="bg-gradient-to-r from-pink-50 via-rose-50 to-indigo-50 dark:from-slate-900 dark:via-pink-950/40 dark:to-slate-900 border border-pink-200/90 dark:border-pink-900/60 rounded-2xl p-4 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs md:text-sm animate-in fade-in shadow-xs">
+            <div className="flex items-center gap-2.5 text-slate-800 dark:text-slate-200">
+              <Sparkles className="w-4 h-4 text-pink-600 dark:text-pink-400 shrink-0" />
               <span>
-                לא נמצאו תוצאות עבור &quot;<strong className="text-pink-700 font-bold">{filter.searchQuery}</strong>&quot; ב<strong>{currentTabName}</strong>, אך נמצאו <strong className="text-slate-900 font-extrabold">{otherTabMatchesCount}</strong> תוצאות בלשוניות אחרות!
+                לא נמצאו תוצאות עבור &quot;<strong className="text-pink-700 dark:text-pink-300 font-bold">{filter.searchQuery}</strong>&quot; ב<strong>{currentTabName}</strong>, אך נמצאו <strong className="text-slate-900 dark:text-white font-extrabold">{otherTabMatchesCount}</strong> תוצאות בלשוניות אחרות!
               </span>
             </div>
             <button
@@ -593,25 +618,25 @@ export const App: React.FC = () => {
       />
 
       {/* Footer */}
-      <footer className="bg-white border-t border-slate-200 mt-12 py-8 text-xs text-slate-500">
+      <footer className="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 mt-12 py-8 text-xs text-slate-500 dark:text-slate-400 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-slate-800">UNIC Club Card Portal</span>
+            <span className="font-bold text-slate-800 dark:text-slate-200">UNIC Club Card Portal</span>
             <span>•</span>
-            <span className="inline-flex items-center gap-1 text-emerald-600 font-medium">
+            <span className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-medium">
               <ShieldCheck className="w-3.5 h-3.5" />
               מערכת סריקה שבועית מבוססת GitHub Actions
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 text-slate-400">
+          <div className="flex flex-wrap items-center gap-4 text-slate-400 dark:text-slate-500">
             <span>כרטיסי Max Executive / TAU / UNIQ</span>
             <span>•</span>
             <a
               href="https://www.uniq-club.co.il"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-pink-600 hover:text-pink-700 flex items-center gap-1 font-medium"
+              className="text-pink-600 dark:text-pink-400 hover:text-pink-700 dark:hover:text-pink-300 flex items-center gap-1 font-medium transition-colors"
             >
               <span>אתר מועדון יוניק הרשמי</span>
               <ExternalLink className="w-3 h-3" />

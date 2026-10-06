@@ -29,12 +29,12 @@ export const SearchAndFilterBar: React.FC<SearchAndFilterBarProps> = ({
   tabBreakdown,
 }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-4 mb-6">
+    <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200/80 dark:border-slate-800 p-4 mb-6 transition-colors">
       <div className="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
         {/* Search Input & All-Tabs Toggle Container */}
         <div className="flex-1 flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
           <div className="relative flex-1">
-            <Search className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+            <Search className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 dark:text-slate-500 pointer-events-none" />
             <input
               type="text"
               value={filter.searchQuery}
@@ -44,17 +44,17 @@ export const SearchAndFilterBar: React.FC<SearchAndFilterBarProps> = ({
                   ? 'חיפוש בכל 4 הלשוניות (מותג, רשת, מוצר, סוג הנחה או מגבלה)...'
                   : `חיפוש לפי שם מותג, רשת, מוצר, סוג הנחה או מגבלה ב${currentTabName}...`
               }
-              className={`w-full pl-9 pr-10 py-2.5 bg-slate-50 border rounded-xl text-sm focus:outline-none focus:ring-2 transition-all text-slate-900 placeholder:text-slate-400 font-medium ${
+              className={`w-full pl-9 pr-10 py-2.5 bg-slate-50 dark:bg-slate-800 border rounded-xl text-sm focus:outline-none focus:ring-2 transition-all text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 font-medium ${
                 filter.searchAllTabs
-                  ? 'border-pink-300 focus:ring-pink-500/20 focus:border-pink-500 bg-pink-50/20'
-                  : 'border-slate-200 focus:ring-pink-500/20 focus:border-pink-500'
+                  ? 'border-pink-300 dark:border-pink-500/50 focus:ring-pink-500/20 focus:border-pink-500 bg-pink-50/20 dark:bg-pink-950/20'
+                  : 'border-slate-200 dark:border-slate-700 focus:ring-pink-500/20 focus:border-pink-500'
               }`}
               dir="rtl"
             />
             {filter.searchQuery && (
               <button
                 onClick={() => onFilterChange({ ...filter, searchQuery: '' })}
-                className="absolute left-3 top-1/2 -translate-y-1/2 p-1 text-slate-400 hover:text-slate-600 transition-colors cursor-pointer"
+                className="absolute left-3 top-1/2 -translate-y-1/2 p-1 text-slate-400 dark:text-slate-500 hover:text-slate-600 dark:hover:text-slate-300 transition-colors cursor-pointer"
                 title="נקה חיפוש"
               >
                 <X className="w-3.5 h-3.5" />
@@ -75,18 +75,18 @@ export const SearchAndFilterBar: React.FC<SearchAndFilterBarProps> = ({
             className={`inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 text-xs font-bold rounded-xl border transition-all cursor-pointer shrink-0 ${
               filter.searchAllTabs
                 ? 'bg-pink-600 text-white border-pink-600 shadow-sm shadow-pink-600/25 ring-2 ring-pink-400/30'
-                : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 hover:text-slate-900'
+                : 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700/80 hover:text-slate-900 dark:hover:text-white'
             }`}
             title="חפש במקביל בכל 4 הלשוניות: כרטיס נטען, הטבות מוצר, רשתות והנחות במעמד החיוב"
           >
-            <Layers className={`w-4 h-4 ${filter.searchAllTabs ? 'text-white' : 'text-pink-600'}`} />
+            <Layers className={`w-4 h-4 ${filter.searchAllTabs ? 'text-white' : 'text-pink-600 dark:text-pink-400'}`} />
             <span>חיפוש בכל הלשוניות</span>
             {filter.searchAllTabs ? (
               <span className="bg-white/20 text-white text-[10px] px-1.5 py-0.5 rounded-full font-extrabold">
                 פעיל
               </span>
             ) : (
-              <span className="bg-slate-200/80 text-slate-600 text-[10px] px-1.5 py-0.5 rounded-full font-semibold">
+              <span className="bg-slate-200/80 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-[10px] px-1.5 py-0.5 rounded-full font-semibold">
                 4 לשוניות
               </span>
             )}
@@ -99,7 +99,7 @@ export const SearchAndFilterBar: React.FC<SearchAndFilterBarProps> = ({
             <select
               value={filter.selectedCategory}
               onChange={(e) => onFilterChange({ ...filter, selectedCategory: e.target.value })}
-              className="w-full appearance-none bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 pr-8 text-xs font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 cursor-pointer"
+              className="w-full appearance-none bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 pr-8 text-xs font-medium text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-pink-500/20 focus:border-pink-500 cursor-pointer"
             >
               <option value="">
                 {filter.searchAllTabs ? `כל הקטגוריות (${categories.length})` : `כל הקטגוריות ב${currentTabName} (${categories.length})`}
@@ -110,7 +110,7 @@ export const SearchAndFilterBar: React.FC<SearchAndFilterBarProps> = ({
                 </option>
               ))}
             </select>
-            <Filter className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+            <Filter className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 dark:text-slate-500 pointer-events-none" />
           </div>
 
           {/* Quick Cross-Reference Filter Toggle */}
@@ -125,10 +125,10 @@ export const SearchAndFilterBar: React.FC<SearchAndFilterBarProps> = ({
             className={`inline-flex items-center gap-1.5 px-3 py-2.5 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
               filter.onlyWithCrossReferences
                 ? 'bg-pink-500 text-white border-pink-500 shadow-xs'
-                : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                : 'bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700'
             }`}
           >
-            <Sparkles className={`w-3.5 h-3.5 ${filter.onlyWithCrossReferences ? 'text-white' : 'text-pink-500'}`} />
+            <Sparkles className={`w-3.5 h-3.5 ${filter.onlyWithCrossReferences ? 'text-white' : 'text-pink-500 dark:text-pink-400'}`} />
             <span>הצלבות בלבד</span>
           </button>
 
@@ -137,7 +137,7 @@ export const SearchAndFilterBar: React.FC<SearchAndFilterBarProps> = ({
             <button
               type="button"
               onClick={onClearFilters}
-              className="inline-flex items-center gap-1 px-3 py-2.5 text-xs font-semibold rounded-xl text-rose-600 bg-rose-50 border border-rose-200 hover:bg-rose-100 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1 px-3 py-2.5 text-xs font-semibold rounded-xl text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 hover:bg-rose-100 dark:hover:bg-rose-900/60 transition-colors cursor-pointer"
             >
               <X className="w-3.5 h-3.5" />
               <span>נקה סינון ({activeFilterCount})</span>
@@ -147,53 +147,53 @@ export const SearchAndFilterBar: React.FC<SearchAndFilterBarProps> = ({
       </div>
 
       {/* Results Count & Active Filter Indicator */}
-      <div className="flex flex-wrap items-center justify-between text-xs text-slate-500 mt-3 pt-3 border-t border-slate-100 gap-2">
+      <div className="flex flex-wrap items-center justify-between text-xs text-slate-500 dark:text-slate-400 mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 gap-2">
         <div className="flex flex-wrap items-center gap-2">
-          <Filter className="w-3.5 h-3.5 text-slate-400" />
+          <Filter className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500" />
           <span>
-            נמצאו <strong className="text-slate-800 font-semibold">{totalResults}</strong> תוצאות
+            נמצאו <strong className="text-slate-800 dark:text-white font-semibold">{totalResults}</strong> תוצאות
             {filter.searchAllTabs ? ' בכל 4 הלשוניות' : ` ב${currentTabName}`}
           </span>
 
           {filter.searchAllTabs && (
-            <span className="inline-flex items-center gap-1 text-pink-700 bg-pink-100/90 border border-pink-200 px-2 py-0.5 rounded-md font-bold text-[11px]">
-              <Layers className="w-3 h-3 text-pink-600" />
+            <span className="inline-flex items-center gap-1 text-pink-700 dark:text-pink-300 bg-pink-100/90 dark:bg-pink-950/70 border border-pink-200 dark:border-pink-800/80 px-2 py-0.5 rounded-md font-bold text-[11px]">
+              <Layers className="w-3 h-3 text-pink-600 dark:text-pink-400" />
               חיפוש רוחבי בכל הלשוניות
             </span>
           )}
 
           {filter.searchQuery && (
-            <span className="text-pink-600 bg-pink-50 px-2 py-0.5 rounded-md font-medium">
+            <span className="text-pink-600 dark:text-pink-300 bg-pink-50 dark:bg-pink-950/50 px-2 py-0.5 rounded-md font-medium border border-pink-100 dark:border-pink-900/40">
               חיפוש: &quot;{filter.searchQuery}&quot;
             </span>
           )}
           {filter.selectedCategory && (
-            <span className="text-pink-600 bg-pink-50 px-2 py-0.5 rounded-md font-medium">
+            <span className="text-pink-600 dark:text-pink-300 bg-pink-50 dark:bg-pink-950/50 px-2 py-0.5 rounded-md font-medium border border-pink-100 dark:border-pink-900/40">
               קטגוריה: {filter.selectedCategory}
             </span>
           )}
           {filter.onlyWithCrossReferences && (
-            <span className="text-pink-600 bg-pink-50 px-2 py-0.5 rounded-md font-medium">
+            <span className="text-pink-600 dark:text-pink-300 bg-pink-50 dark:bg-pink-950/50 px-2 py-0.5 rounded-md font-medium border border-pink-100 dark:border-pink-900/40">
               הצלבות פעילות
             </span>
           )}
         </div>
 
         {filter.searchAllTabs && tabBreakdown && (
-          <div className="flex items-center gap-2 text-[11px] text-slate-500 font-medium">
+          <div className="flex items-center gap-2 text-[11px] text-slate-500 dark:text-slate-400 font-medium">
             <span>פירוט:</span>
-            <span className="text-pink-700">נטען: {tabBreakdown.tabA}</span>
+            <span className="text-pink-700 dark:text-pink-400 font-semibold">נטען: {tabBreakdown.tabA}</span>
             <span>•</span>
-            <span className="text-emerald-700">מוצרים: {tabBreakdown.tabB}</span>
+            <span className="text-emerald-700 dark:text-emerald-400 font-semibold">מוצרים: {tabBreakdown.tabB}</span>
             <span>•</span>
-            <span className="text-indigo-700">רשתות: {tabBreakdown.tabC}</span>
+            <span className="text-indigo-700 dark:text-indigo-400 font-semibold">רשתות: {tabBreakdown.tabC}</span>
             <span>•</span>
-            <span className="text-amber-700">חיוב: {tabBreakdown.tabD}</span>
+            <span className="text-amber-700 dark:text-amber-400 font-semibold">חיוב: {tabBreakdown.tabD}</span>
           </div>
         )}
 
         {!filter.searchAllTabs && (
-          <div className="text-[11px] text-slate-400">
+          <div className="text-[11px] text-slate-400 dark:text-slate-500">
             רוצה לחפש בכל הלשוניות במקביל? הפעל &quot;חיפוש בכל הלשוניות&quot;
           </div>
         )}
