@@ -1,7 +1,7 @@
 import React from 'react';
 import { TabKey } from '../types';
 import { StatusIndicators } from './StatusIndicators';
-import { CreditCard, ShoppingBag, Store, Zap, Sparkles, CheckCircle2, Shield } from 'lucide-react';
+import { CreditCard, ShoppingBag, Store, Zap, Sparkles, CheckCircle2, Shield, Layers } from 'lucide-react';
 
 interface NavbarProps {
   activeTab: TabKey;
@@ -16,6 +16,8 @@ interface NavbarProps {
   siteLastUpdated?: string;
   pdfLastUpdated?: string;
   pdfHash?: string;
+  isSearchAllTabs?: boolean;
+  onToggleSearchAllTabs?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -25,6 +27,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   siteLastUpdated,
   pdfLastUpdated,
   pdfHash,
+  isSearchAllTabs = false,
+  onToggleSearchAllTabs,
 }) => {
   const tabs: { key: TabKey; label: string; count: number; icon: React.FC<any>; color: string }[] = [
     {
@@ -110,35 +114,60 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
 
-        {/* 4 Tabs Selector Bar */}
-        <nav className="flex space-x-1 space-x-reverse overflow-x-auto py-2.5 scrollbar-none" aria-label="Tabs">
-          {tabs.map((tab) => {
-            const Icon = tab.icon;
-            const isActive = activeTab === tab.key;
+        {/* 4 Tabs Selector Bar + All Tabs Search Option */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-2.5">
+          <nav className="flex space-x-1 space-x-reverse overflow-x-auto scrollbar-none" aria-label="Tabs">
+            {tabs.map((tab) => {
+              const Icon = tab.icon;
+              const isActive = activeTab === tab.key && !isSearchAllTabs;
 
-            return (
-              <button
-                key={tab.key}
-                onClick={() => onTabChange(tab.key)}
-                className={`flex items-center gap-2 px-3.5 md:px-4 py-2 text-xs md:text-sm font-bold rounded-xl transition-all whitespace-nowrap cursor-pointer ${
-                  isActive
-                    ? 'bg-pink-600 text-white shadow-md shadow-pink-600/20 scale-[1.02]'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                }`}
-              >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-slate-400'}`} />
-                <span>{tab.label}</span>
-                <span
-                  className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${
-                    isActive ? 'bg-white/20 text-white' : 'bg-slate-200/70 text-slate-700'
+              return (
+                <button
+                  key={tab.key}
+                  onClick={() => onTabChange(tab.key)}
+                  className={`flex items-center gap-2 px-3.5 md:px-4 py-2 text-xs md:text-sm font-bold rounded-xl transition-all whitespace-nowrap cursor-pointer ${
+                    isActive
+                      ? 'bg-pink-600 text-white shadow-md shadow-pink-600/20 scale-[1.02]'
+                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                   }`}
                 >
-                  {tab.count}
-                </span>
-              </button>
-            );
-          })}
-        </nav>
+                  <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-slate-400'}`} />
+                  <span>{tab.label}</span>
+                  <span
+                    className={`text-[11px] px-2 py-0.5 rounded-full font-semibold ${
+                      isActive ? 'bg-white/20 text-white' : 'bg-slate-200/70 text-slate-700'
+                    }`}
+                  >
+                    {tab.count}
+                  </span>
+                </button>
+              );
+            })}
+          </nav>
+
+          {onToggleSearchAllTabs && (
+            <button
+              onClick={onToggleSearchAllTabs}
+              data-testid="navbar-all-tabs-toggle"
+              className={`flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl border transition-all whitespace-nowrap cursor-pointer self-start sm:self-auto ${
+                isSearchAllTabs
+                  ? 'bg-slate-900 text-white border-slate-900 shadow-md ring-2 ring-pink-400/30'
+                  : 'bg-pink-50 text-pink-700 border-pink-200 hover:bg-pink-100'
+              }`}
+              title="חפש במקביל בכל 4 הלשוניות"
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span>חיפוש בכל הלשוניות</span>
+              <span
+                className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
+                  isSearchAllTabs ? 'bg-pink-600 text-white' : 'bg-pink-200 text-pink-800'
+                }`}
+              >
+                {counts.total}
+              </span>
+            </button>
+          )}
+        </div>
       </div>
     </header>
   );

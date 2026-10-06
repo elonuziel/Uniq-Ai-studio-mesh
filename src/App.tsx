@@ -16,9 +16,10 @@ import { TabAView } from './components/TabAView';
 import { TabBView } from './components/TabBView';
 import { TabCView } from './components/TabCView';
 import { TabDView } from './components/TabDView';
+import { AllTabsView } from './components/AllTabsView';
 import { DetailModal } from './components/DetailModal';
 import { isDataStale, getDaysDifference } from './utils/dateUtils';
-import { Loader2, RefreshCw, ExternalLink, ShieldCheck, Sparkles, X, AlertTriangle } from 'lucide-react';
+import { Loader2, RefreshCw, ExternalLink, ShieldCheck, Sparkles, X, AlertTriangle, Layers } from 'lucide-react';
 
 const INITIAL_FILTER: FilterState = {
   searchQuery: '',
@@ -26,6 +27,7 @@ const INITIAL_FILTER: FilterState = {
   onlyWithCrossReferences: false,
   selectedBadgeType: null,
   selectedSort: 'default',
+  searchAllTabs: false,
 };
 
 export const App: React.FC = () => {
@@ -166,8 +168,20 @@ export const App: React.FC = () => {
     if (filter.searchQuery.trim()) count++;
     if (filter.selectedCategory) count++;
     if (filter.onlyWithCrossReferences) count++;
+    if (filter.searchAllTabs) count++;
     return count;
   }, [filter]);
+
+  // Combined categories across all 4 datasets
+  const allCategories = useMemo(() => {
+    if (!rechargeableData || !scrapedData) return [];
+    const set = new Set<string>();
+    rechargeableData.brands.forEach((b) => set.add(b.category));
+    scrapedData.item_deals.forEach((d) => set.add(d.category));
+    scrapedData.brand_discounts.forEach((b) => set.add(b.category));
+    scrapedData.billing_stage_discounts.forEach((b) => set.add(b.category));
+    return Array.from(set).sort((a, b) => a.localeCompare(b, 'he'));
+  }, [rechargeableData, scrapedData]);
 
   // Categories list per active tab
   const tabCategories = useMemo(() => {
@@ -190,6 +204,8 @@ export const App: React.FC = () => {
     }
     return Array.from(set).sort((a, b) => a.localeCompare(b, 'he'));
   }, [activeTab, rechargeableData, scrapedData]);
+
+  const activeCategories = filter.searchAllTabs ? allCategories : tabCategories;
 
   // Filtered Tab A (Rechargeable)
   const filteredTabA = useMemo(() => {
@@ -336,6 +352,32 @@ export const App: React.FC = () => {
     };
   }, [rechargeableData, scrapedData]);
 
+  const totalAllTabsResults = useMemo(() => {
+    return filteredTabA.length + filteredTabB.length + filteredTabC.length + filteredTabD.length;
+  }, [filteredTabA, filteredTabB, filteredTabC, filteredTabD]);
+
+  const displayTotalResults = filter.searchAllTabs ? totalAllTabsResults : currentTabResultCount;
+
+  const tabBreakdown = useMemo(() => {
+    return {
+      tabA: filteredTabA.length,
+      tabB: filteredTabB.length,
+      tabC: filteredTabC.length,
+      tabD: filteredTabD.length,
+    };
+  }, [filteredTabA, filteredTabB, filteredTabC, filteredTabD]);
+
+  const otherTabMatchesCount = useMemo(() => {
+    if (filter.searchAllTabs || !filter.searchQuery.trim()) return 0;
+    if (currentTabResultCount > 0) return 0;
+    return (
+      (activeTab !== 'A' ? filteredTabA.length : 0) +
+      (activeTab !== 'B' ? filteredTabB.length : 0) +
+      (activeTab !== 'C' ? filteredTabC.length : 0) +
+      (activeTab !== 'D' ? filteredTabD.length : 0)
+    );
+  }, [filter.searchAllTabs, filter.searchQuery, currentTabResultCount, activeTab, filteredTabA, filteredTabB, filteredTabC, filteredTabD]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 text-slate-800 p-4">
@@ -380,12 +422,16 @@ export const App: React.FC = () => {
         activeTab={activeTab}
         onTabChange={(tab) => {
           setActiveTab(tab);
-          setFilter({ ...filter, selectedCategory: '' });
+          setFilter({ ...filter, selectedCategory: '', searchAllTabs: false });
         }}
         counts={counts}
         siteLastUpdated={siteDate}
         pdfLastUpdated={rechargeableData?.metadata.last_updated || rechargeableData?.metadata.last_verified}
         pdfHash={rechargeableData?.metadata.source_pdf_hash}
+        isSearchAllTabs={Boolean(filter.searchAllTabs)}
+        onToggleSearchAllTabs={() =>
+          setFilter({ ...filter, searchAllTabs: !filter.searchAllTabs })
+        }
       />
 
       {/* Subtle Data Staleness Warning Banner (For scraped site data only > 10 days) */}
@@ -436,8 +482,8 @@ export const App: React.FC = () => {
           </div>
         )}
 
-        {/* Global Rules Card on Tab A */}
-        {activeTab === 'A' && rechargeableData && (
+        {/* Global Rules Card on Tab A (When not in all-tabs search mode) */}
+        {activeTab === 'A' && !filter.searchAllTabs && rechargeableData && (
           <GlobalRulesCard
             rules={rechargeableData.global_rules}
             verifiedHash={rechargeableData.metadata.source_pdf_hash}
@@ -450,49 +496,89 @@ export const App: React.FC = () => {
         <SearchAndFilterBar
           filter={filter}
           onFilterChange={setFilter}
-          categories={tabCategories}
-          totalResults={currentTabResultCount}
+          categories={activeCategories}
+          totalResults={displayTotalResults}
           activeFilterCount={activeFilterCount}
           onClearFilters={handleClearFilters}
           currentTabName={currentTabName}
+          tabBreakdown={tabBreakdown}
         />
+
+        {/* Smart Cross-Tab Discovery Prompt */}
+        {otherTabMatchesCount > 0 && !filter.searchAllTabs && (
+          <div className="bg-gradient-to-r from-pink-50 via-rose-50 to-indigo-50 border border-pink-200/90 rounded-2xl p-4 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs md:text-sm animate-in fade-in shadow-xs">
+            <div className="flex items-center gap-2.5 text-slate-800">
+              <Sparkles className="w-4 h-4 text-pink-600 shrink-0" />
+              <span>
+                לא נמצאו תוצאות עבור &quot;<strong className="text-pink-700 font-bold">{filter.searchQuery}</strong>&quot; ב<strong>{currentTabName}</strong>, אך נמצאו <strong className="text-slate-900 font-extrabold">{otherTabMatchesCount}</strong> תוצאות בלשוניות אחרות!
+              </span>
+            </div>
+            <button
+              onClick={() => setFilter({ ...filter, searchAllTabs: true })}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-pink-600 text-white font-bold hover:bg-pink-700 transition-colors cursor-pointer text-xs self-start sm:self-auto shrink-0 shadow-xs"
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span>הצג תוצאות מכל הלשוניות ({otherTabMatchesCount})</span>
+            </button>
+          </div>
+        )}
 
         {/* Tab View Render */}
         <div className="mt-2">
-          {activeTab === 'A' && (
-            <TabAView
-              brands={filteredTabA}
+          {filter.searchAllTabs ? (
+            <AllTabsView
+              searchQuery={filter.searchQuery}
+              tabA={filteredTabA}
+              tabB={filteredTabB}
+              tabC={filteredTabC}
+              tabD={filteredTabD}
               onNavigateCrossReference={handleNavigateCrossReference}
               highlightedId={highlightedId}
-              onOpenDetails={(item) => setModalItem({ item, type: 'rechargeable' })}
+              onOpenDetails={(item, type) => setModalItem({ item, type })}
+              onSelectTab={(tab) => {
+                setActiveTab(tab);
+                setFilter({ ...filter, searchAllTabs: false });
+              }}
+              onClearSearch={handleClearFilters}
             />
-          )}
+          ) : (
+            <>
+              {activeTab === 'A' && (
+                <TabAView
+                  brands={filteredTabA}
+                  onNavigateCrossReference={handleNavigateCrossReference}
+                  highlightedId={highlightedId}
+                  onOpenDetails={(item) => setModalItem({ item, type: 'rechargeable' })}
+                />
+              )}
 
-          {activeTab === 'B' && (
-            <TabBView
-              deals={filteredTabB}
-              onNavigateCrossReference={handleNavigateCrossReference}
-              highlightedId={highlightedId}
-              onOpenDetails={(item) => setModalItem({ item, type: 'deal' })}
-            />
-          )}
+              {activeTab === 'B' && (
+                <TabBView
+                  deals={filteredTabB}
+                  onNavigateCrossReference={handleNavigateCrossReference}
+                  highlightedId={highlightedId}
+                  onOpenDetails={(item) => setModalItem({ item, type: 'deal' })}
+                />
+              )}
 
-          {activeTab === 'C' && (
-            <TabCView
-              brands={filteredTabC}
-              onNavigateCrossReference={handleNavigateCrossReference}
-              highlightedId={highlightedId}
-              onOpenDetails={(item) => setModalItem({ item, type: 'brand' })}
-            />
-          )}
+              {activeTab === 'C' && (
+                <TabCView
+                  brands={filteredTabC}
+                  onNavigateCrossReference={handleNavigateCrossReference}
+                  highlightedId={highlightedId}
+                  onOpenDetails={(item) => setModalItem({ item, type: 'brand' })}
+                />
+              )}
 
-          {activeTab === 'D' && (
-            <TabDView
-              discounts={filteredTabD}
-              onNavigateCrossReference={handleNavigateCrossReference}
-              highlightedId={highlightedId}
-              onOpenDetails={(item) => setModalItem({ item, type: 'billing' })}
-            />
+              {activeTab === 'D' && (
+                <TabDView
+                  discounts={filteredTabD}
+                  onNavigateCrossReference={handleNavigateCrossReference}
+                  highlightedId={highlightedId}
+                  onOpenDetails={(item) => setModalItem({ item, type: 'billing' })}
+                />
+              )}
+            </>
           )}
         </div>
       </main>

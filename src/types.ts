@@ -141,4 +141,5 @@ export interface FilterState {
   onlyWithCrossReferences: boolean;
   selectedBadgeType: string | null;
   selectedSort: 'default' | 'name-asc' | 'discount-desc';
+  searchAllTabs?: boolean;
 }

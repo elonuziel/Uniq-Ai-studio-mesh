@@ -221,4 +221,73 @@ describe('UNIC Club Portal - Unit & Integration Tests', () => {
     // Verify phone number is preserved
     expect(screen.getAllByText(/03-6018282/).length).toBeGreaterThan(0);
   });
+
+  it('searches across all tabs when "חיפוש בכל הלשוניות" is toggled', async () => {
+    render(<App />);
+
+    await waitFor(() => {
+      expect(screen.getByText(/מועדון UNIQ/i)).toBeInTheDocument();
+    });
+
+    // Locate the search across all tabs toggle button
+    const allTabsToggle = screen.getByTestId('search-all-tabs-toggle');
+    expect(allTabsToggle).toBeInTheDocument();
+    expect(screen.getAllByText(/חיפוש בכל הלשוניות/i).length).toBeGreaterThan(0);
+
+    // Toggle search across all tabs
+    fireEvent.click(allTabsToggle);
+
+    await waitFor(() => {
+      // The AllTabsView container should be active
+      expect(screen.getByTestId('all-tabs-view')).toBeInTheDocument();
+      expect(screen.getByText(/תוצאות חיפוש בכל 4 הלשוניות/i)).toBeInTheDocument();
+    });
+
+    // Enter a search query present across tabs (e.g. "פוקס")
+    const searchInput = screen.getByPlaceholderText(/חיפוש בכל 4 הלשוניות/i);
+    fireEvent.change(searchInput, { target: { value: 'פוקס' } });
+
+    await waitFor(() => {
+      // Tab A section should display Fox Group
+      expect(screen.getByText(/קבוצת פוקס/i)).toBeInTheDocument();
+      expect(screen.getByText(/לשונית א': כרטיס נטען 15% הנחה/i)).toBeInTheDocument();
+    });
+
+    // Click "הצג רק לשונית זו" to jump to single tab view
+    const showOnlyTabA = screen.getByRole('button', { name: /הצג רק לשונית זו/i });
+    fireEvent.click(showOnlyTabA);
+
+    await waitFor(() => {
+      // AllTabsView should no longer be active, single Tab A view should be shown
+      expect(screen.queryByTestId('all-tabs-view')).not.toBeInTheDocument();
+      expect(screen.getByText(/קבוצת פוקס/i)).toBeInTheDocument();
+    });
+  });
+
+  it('shows smart discovery prompt when item is not in current tab but exists in other tabs', async () => {
+    render(<App />);
+
+    await waitFor(() => {
+      expect(screen.getByText(/קבוצת פוקס/i)).toBeInTheDocument();
+    });
+
+    // Search for an item deal that is in Tab B (e.g., "מגש פירות") while currently on Tab A
+    const searchInput = screen.getByPlaceholderText(/חיפוש לפי שם מותג/i);
+    fireEvent.change(searchInput, { target: { value: 'מגש פירות' } });
+
+    await waitFor(() => {
+      // Prompt should appear offering to search across all tabs
+      expect(screen.getByText(/לא נמצאו תוצאות עבור/i)).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /הצג תוצאות מכל הלשוניות/i })).toBeInTheDocument();
+    });
+
+    // Clicking the button activates all-tabs search
+    const viewAllBtn = screen.getByRole('button', { name: /הצג תוצאות מכל הלשוניות/i });
+    fireEvent.click(viewAllBtn);
+
+    await waitFor(() => {
+      expect(screen.getByTestId('all-tabs-view')).toBeInTheDocument();
+      expect(screen.getByText(/מגש פירות עם יין \/ עוגה/i)).toBeInTheDocument();
+    });
+  });
 });
