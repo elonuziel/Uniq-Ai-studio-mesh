@@ -631,7 +631,7 @@ export const AllTabsView: React.FC<AllTabsViewProps> = ({
       {tabA.length > 0 && (
         <SectionBlock
           id="all-tabs-section-A"
-          label="לשונית א׳: כרטיס נטען 15% הנחה"
+          label="לשונית א': כרטיס נטען 15% הנחה"
           description="רשתות ומותגים הנטענים מראש בהנחה קבועה של 15% (מאומת מול ספח Max)"
           count={Math.min(PREVIEW_COUNT, tabA.length)}
           totalCount={tabA.length}
@@ -655,7 +655,7 @@ export const AllTabsView: React.FC<AllTabsViewProps> = ({
       {tabB.length > 0 && (
         <SectionBlock
           id="all-tabs-section-B"
-          label="לשונית ב׳: הטבות לפי מוצר"
+          label="לשונית ב': הטבות לפי מוצר"
           description="שוברים, כרטיסים ומוצרים במחירי מועדון מסונכרנים חי מאתר UNIQ"
           count={Math.min(PREVIEW_COUNT, tabB.length)}
           totalCount={tabB.length}
@@ -679,7 +679,7 @@ export const AllTabsView: React.FC<AllTabsViewProps> = ({
       {tabC.length > 0 && (
         <SectionBlock
           id="all-tabs-section-C"
-          label="לשונית ג׳: הנחות רשתות ומותגים"
+          label="לשונית ג': הנחות רשתות ומותגים"
           description="מבצעים והנחות ברשתות מובילות, אתרי אונליין וסניפים פיזיים"
           count={Math.min(PREVIEW_COUNT, tabC.length)}
           totalCount={tabC.length}
@@ -703,7 +703,7 @@ export const AllTabsView: React.FC<AllTabsViewProps> = ({
       {tabD.length > 0 && (
         <SectionBlock
           id="all-tabs-section-D"
-          label="לשונית ד׳: הנחות במעמד החיוב"
+          label="לשונית ד': הנחות במעמד החיוב"
           description="הנחות אוטומטיות בדף פירוט חיובי האשראי (ללא צורך בשובר או קופון)"
           count={Math.min(PREVIEW_COUNT, tabD.length)}
           totalCount={tabD.length}
