@@ -1,3 +1,7 @@
+import { TabAView } from './TabAView';
+import { TabBView } from './TabBView';
+import { TabCView } from './TabCView';
+import { TabDView } from './TabDView';
 import React from 'react';
 import {
   RechargeableBrand,
@@ -27,6 +31,7 @@ import {
 const PREVIEW_COUNT = 5;
 
 interface AllTabsViewProps {
+  viewMode?: 'cards' | 'table';
   searchQuery: string;
   tabA: RechargeableBrand[];
   tabB: ScrapedItemDeal[];
@@ -505,6 +510,7 @@ const SectionBlock: React.FC<SectionProps> = ({
 ══════════════════════════════════ */
 export const AllTabsView: React.FC<AllTabsViewProps> = ({
   searchQuery,
+  viewMode = 'cards',
   tabA,
   tabB,
   tabC,
@@ -639,15 +645,25 @@ export const AllTabsView: React.FC<AllTabsViewProps> = ({
           icon={<CreditCard className="w-4 h-4" />}
           onShowAll={() => onSelectTab('A')}
         >
-          {tabA.slice(0, PREVIEW_COUNT).map((brand) => (
-            <MiniCardA
-              key={brand.id}
-              brand={brand}
-              highlighted={highlightedId === brand.id}
-              onOpenDetails={onOpenDetails}
+          {viewMode === 'table' ? (
+            <TabAView
+              brands={tabA.slice(0, PREVIEW_COUNT)}
+              viewMode="table"
               onNavigateCrossReference={onNavigateCrossReference}
+              highlightedId={highlightedId}
+              onOpenDetails={onOpenDetails}
             />
-          ))}
+          ) : (
+            tabA.slice(0, PREVIEW_COUNT).map((brand) => (
+              <MiniCardA
+                key={brand.id}
+                brand={brand}
+                highlighted={highlightedId === brand.id}
+                onOpenDetails={onOpenDetails}
+                onNavigateCrossReference={onNavigateCrossReference}
+              />
+            ))
+          )}
         </SectionBlock>
       )}
 
@@ -663,15 +679,25 @@ export const AllTabsView: React.FC<AllTabsViewProps> = ({
           icon={<ShoppingBag className="w-4 h-4" />}
           onShowAll={() => onSelectTab('B')}
         >
-          {tabB.slice(0, PREVIEW_COUNT).map((deal) => (
-            <MiniCardB
-              key={deal.id}
-              deal={deal}
-              highlighted={highlightedId === deal.id || highlightedId === deal.original_id}
-              onOpenDetails={onOpenDetails}
+          {viewMode === 'table' ? (
+            <TabBView
+              deals={tabB.slice(0, PREVIEW_COUNT)}
+              viewMode="table"
               onNavigateCrossReference={onNavigateCrossReference}
+              highlightedId={highlightedId}
+              onOpenDetails={onOpenDetails}
             />
-          ))}
+          ) : (
+            tabB.slice(0, PREVIEW_COUNT).map((deal) => (
+              <MiniCardB
+                key={deal.id}
+                deal={deal}
+                highlighted={highlightedId === deal.id || highlightedId === deal.original_id}
+                onOpenDetails={onOpenDetails}
+                onNavigateCrossReference={onNavigateCrossReference}
+              />
+            ))
+          )}
         </SectionBlock>
       )}
 
@@ -687,15 +713,25 @@ export const AllTabsView: React.FC<AllTabsViewProps> = ({
           icon={<Store className="w-4 h-4" />}
           onShowAll={() => onSelectTab('C')}
         >
-          {tabC.slice(0, PREVIEW_COUNT).map((brand) => (
-            <MiniCardC
-              key={brand.id}
-              brand={brand}
-              highlighted={highlightedId === brand.id || highlightedId === brand.original_id}
-              onOpenDetails={onOpenDetails}
+          {viewMode === 'table' ? (
+            <TabCView
+              brands={tabC.slice(0, PREVIEW_COUNT)}
+              viewMode="table"
               onNavigateCrossReference={onNavigateCrossReference}
+              highlightedId={highlightedId}
+              onOpenDetails={onOpenDetails}
             />
-          ))}
+          ) : (
+            tabC.slice(0, PREVIEW_COUNT).map((brand) => (
+              <MiniCardC
+                key={brand.id}
+                brand={brand}
+                highlighted={highlightedId === brand.id || highlightedId === brand.original_id}
+                onOpenDetails={onOpenDetails}
+                onNavigateCrossReference={onNavigateCrossReference}
+              />
+            ))
+          )}
         </SectionBlock>
       )}
 
@@ -711,15 +747,25 @@ export const AllTabsView: React.FC<AllTabsViewProps> = ({
           icon={<Zap className="w-4 h-4" />}
           onShowAll={() => onSelectTab('D')}
         >
-          {tabD.slice(0, PREVIEW_COUNT).map((item) => (
-            <MiniCardD
-              key={item.id}
-              item={item}
-              highlighted={highlightedId === item.id || highlightedId === item.original_id}
-              onOpenDetails={onOpenDetails}
+          {viewMode === 'table' ? (
+            <TabDView
+              discounts={tabD.slice(0, PREVIEW_COUNT)}
+              viewMode="table"
               onNavigateCrossReference={onNavigateCrossReference}
+              highlightedId={highlightedId}
+              onOpenDetails={onOpenDetails}
             />
-          ))}
+          ) : (
+            tabD.slice(0, PREVIEW_COUNT).map((item) => (
+              <MiniCardD
+                key={item.id}
+                item={item}
+                highlighted={highlightedId === item.id || highlightedId === item.original_id}
+                onOpenDetails={onOpenDetails}
+                onNavigateCrossReference={onNavigateCrossReference}
+              />
+            ))
+          )}
         </SectionBlock>
       )}
     </div>

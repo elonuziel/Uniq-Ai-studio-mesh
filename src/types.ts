@@ -135,6 +135,8 @@ export interface ScrapedDataset {
   billing_stage_discounts: ScrapedBillingDiscount[];
 }
 
+export type ViewMode = 'cards' | 'table';
+
 export interface FilterState {
   searchQuery: string;
   selectedCategory: string;
@@ -142,4 +144,5 @@ export interface FilterState {
   selectedBadgeType: string | null;
   selectedSort: 'default' | 'name-asc' | 'discount-desc';
   searchAllTabs?: boolean;
+  viewMode?: ViewMode;
 }
