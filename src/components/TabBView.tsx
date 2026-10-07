@@ -7,6 +7,7 @@ import { ShoppingBag, Tag, ExternalLink } from 'lucide-react';
 
 interface TabBViewProps {
   deals: ScrapedItemDeal[];
+  viewMode?: 'cards' | 'table';
   onNavigateCrossReference: (targetTab: TabKey, filterBrandName: string, targetId?: string) => void;
   highlightedId: string | null;
   onOpenDetails: (item: any, type: 'deal') => void;
@@ -14,6 +15,7 @@ interface TabBViewProps {
 
 export const TabBView: React.FC<TabBViewProps> = ({
   deals,
+  viewMode = 'cards',
   onNavigateCrossReference,
   highlightedId,
   onOpenDetails,
@@ -24,6 +26,106 @@ export const TabBView: React.FC<TabBViewProps> = ({
         <ShoppingBag className="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-3" />
         <h3 className="text-lg font-bold text-slate-700 dark:text-slate-200 mb-1">לא נמצאו הטבות מוצר מתאימות</h3>
         <p className="text-sm text-slate-500 dark:text-slate-400">נסה לחפש מוצר אחר או להסיר סינונים פעילים.</p>
+      </div>
+    );
+  }
+
+  if (viewMode === 'table') {
+    return (
+      <div className="overflow-x-auto bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
+        <table className="w-full text-right text-xs md:text-sm border-collapse">
+          <thead>
+            <tr className="bg-slate-50 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-800 font-bold">
+              <th className="py-3 px-4">שם המוצר / ההטבה</th>
+              <th className="py-3 px-4">קטגוריה</th>
+              <th className="py-3 px-4">מחיר מועדון</th>
+              <th className="py-3 px-4">הנחה / תגים</th>
+              <th className="py-3 px-4">הצלבות / פעולות</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+            {deals.map((deal) => {
+              const isHighlighted = highlightedId === deal.id || highlightedId === deal.original_id;
+              const directUrl = deal.direct_url || `https://www.uniq-club.co.il/product/${deal.original_id}`;
+
+              return (
+                <tr
+                  key={deal.id}
+                  id={`card-${deal.id}`}
+                  onClick={() => onOpenDetails(deal, 'deal')}
+                  className={`hover:bg-slate-50/80 dark:hover:bg-slate-800/50 transition-colors cursor-pointer ${
+                    isHighlighted
+                      ? 'bg-emerald-50/60 dark:bg-emerald-950/40 font-semibold'
+                      : ''
+                  }`}
+                >
+                  <td className="py-3 px-4">
+                    <div className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                      <span>{deal.name}</span>
+                      <a
+                        href={directUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors p-0.5"
+                        title={`פתח את ${deal.name} באתר UNIQ`}
+                      >
+                        <ExternalLink className="w-3.5 h-3.5 inline" />
+                      </a>
+                    </div>
+                  </td>
+                  <td className="py-3 px-4 whitespace-nowrap">
+                    <span className="inline-flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                      <Tag className="w-3 h-3 text-slate-400" />
+                      {deal.category}
+                    </span>
+                  </td>
+                  <td className="py-3 px-4 whitespace-nowrap">
+                    {deal.price !== undefined && deal.price !== null ? (
+                      <div className="font-bold text-slate-900 dark:text-white">
+                        {deal.price === 0 ? 'חינם' : `${deal.price} ₪`}
+                        {deal.original_price && deal.original_price > (deal.price || 0) && (
+                          <span className="text-slate-400 text-xs line-through mr-1.5 font-normal">
+                            {deal.original_price} ₪
+                          </span>
+                        )}
+                      </div>
+                    ) : (
+                      <span className="text-slate-400 dark:text-slate-500 text-xs">-</span>
+                    )}
+                  </td>
+                  <td className="py-3 px-4">
+                    <div className="flex flex-wrap gap-1 items-center">
+                      {deal.discount && (
+                        <span className="inline-flex items-center gap-1 text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60">
+                          {deal.discount}
+                        </span>
+                      )}
+                      {deal.badges.map((badge, idx) => (
+                        <BadgePill key={idx} badge={badge} size="sm" />
+                      ))}
+                    </div>
+                  </td>
+                  <td className="py-3 px-4">
+                    {deal.cross_references && deal.cross_references.length > 0 ? (
+                      <div className="flex flex-wrap gap-1">
+                        {deal.cross_references.map((ref, idx) => (
+                          <CrossReferenceTag
+                            key={idx}
+                            reference={ref}
+                            onNavigate={onNavigateCrossReference}
+                          />
+                        ))}
+                      </div>
+                    ) : (
+                      <span className="text-slate-400 dark:text-slate-600 text-xs">-</span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     );
   }

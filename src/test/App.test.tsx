@@ -291,6 +291,38 @@ describe('UNIC Club Portal - Unit & Integration Tests', () => {
     });
   });
 
+  it('toggles between cards and table view and persists preference in localStorage', async () => {
+    localStorage.clear();
+    render(<App />);
+
+    await waitFor(() => {
+      expect(screen.getByText(/קבוצת פוקס/i)).toBeInTheDocument();
+    });
+
+    // Check toggle buttons exist
+    const cardsBtn = screen.getByTestId('view-mode-cards');
+    const tableBtn = screen.getByTestId('view-mode-table');
+    expect(cardsBtn).toBeInTheDocument();
+    expect(tableBtn).toBeInTheDocument();
+
+    // Click table view toggle
+    fireEvent.click(tableBtn);
+
+    await waitFor(() => {
+      // Table header column for Tab A should be present
+      expect(screen.getByText(/שיעור הנחה/i)).toBeInTheDocument();
+      expect(localStorage.getItem('unic_view_mode')).toBe('table');
+    });
+
+    // Toggle back to cards view
+    fireEvent.click(cardsBtn);
+
+    await waitFor(() => {
+      expect(screen.queryByText(/שיעור הנחה/i)).not.toBeInTheDocument();
+      expect(localStorage.getItem('unic_view_mode')).toBe('cards');
+    });
+  });
+
   it('keeps light mode as default and toggles dark mode via the top button', async () => {
     localStorage.clear();
     document.documentElement.classList.remove('dark');

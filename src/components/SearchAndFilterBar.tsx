@@ -1,6 +1,6 @@
 import React from 'react';
 import { FilterState } from '../types';
-import { Search, X, Filter, Sparkles, Layers } from 'lucide-react';
+import { Search, X, Filter, Sparkles, Layers, LayoutGrid, Table, Eye } from 'lucide-react';
 
 interface SearchAndFilterBarProps {
   filter: FilterState;
@@ -113,7 +113,41 @@ export const SearchAndFilterBar: React.FC<SearchAndFilterBarProps> = ({
             <Filter className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 dark:text-slate-500 pointer-events-none" />
           </div>
 
-          {/* Quick Cross-Reference Filter Toggle */}
+          {/* View Mode Toggle Switch (Cards / Table) */}
+          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-800/80 p-1 rounded-xl border border-slate-200 dark:border-slate-700/80 text-xs font-semibold">
+            <span className="text-slate-500 dark:text-slate-400 px-1.5 hidden sm:inline-flex items-center gap-1 font-medium">
+              <Eye className="w-3.5 h-3.5" />
+              תצוגה:
+            </span>
+            <button
+              type="button"
+              data-testid="view-mode-cards"
+              onClick={() => onFilterChange({ ...filter, viewMode: 'cards' })}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-all cursor-pointer ${
+                (filter.viewMode || 'cards') === 'cards'
+                  ? 'bg-white dark:bg-slate-700 text-pink-600 dark:text-pink-400 font-bold shadow-xs'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+              }`}
+            >
+              <LayoutGrid className="w-3.5 h-3.5" />
+              <span>כרטיסים</span>
+            </button>
+            <button
+              type="button"
+              data-testid="view-mode-table"
+              onClick={() => onFilterChange({ ...filter, viewMode: 'table' })}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-all cursor-pointer ${
+                filter.viewMode === 'table'
+                  ? 'bg-white dark:bg-slate-700 text-pink-600 dark:text-pink-400 font-bold shadow-xs'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+              }`}
+            >
+              <Table className="w-3.5 h-3.5" />
+              <span>טבלה</span>
+            </button>
+          </div>
+
+                    {/* Quick Cross-Reference Filter Toggle */}
           <button
             type="button"
             onClick={() =>

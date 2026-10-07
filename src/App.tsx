@@ -21,6 +21,16 @@ import { DetailModal } from './components/DetailModal';
 import { isDataStale, getDaysDifference } from './utils/dateUtils';
 import { Loader2, RefreshCw, ExternalLink, ShieldCheck, Sparkles, X, AlertTriangle, Layers } from 'lucide-react';
 
+const getSavedViewMode = (): 'cards' | 'table' => {
+  try {
+    const saved = localStorage.getItem('unic_view_mode');
+    if (saved === 'cards' || saved === 'table') return saved;
+  } catch (e) {
+    // ignore
+  }
+  return 'cards';
+};
+
 const INITIAL_FILTER: FilterState = {
   searchQuery: '',
   selectedCategory: '',
@@ -28,6 +38,7 @@ const INITIAL_FILTER: FilterState = {
   selectedBadgeType: null,
   selectedSort: 'default',
   searchAllTabs: false,
+  viewMode: getSavedViewMode(),
 };
 
 export const App: React.FC = () => {
@@ -179,8 +190,22 @@ export const App: React.FC = () => {
     }, 100);
   };
 
+  const handleFilterChange = (newFilter: FilterState) => {
+    if (newFilter.viewMode && newFilter.viewMode !== filter.viewMode) {
+      try {
+        localStorage.setItem('unic_view_mode', newFilter.viewMode);
+      } catch (e) {
+        // ignore
+      }
+    }
+    setFilter(newFilter);
+  };
+
   const handleClearFilters = () => {
-    setFilter(INITIAL_FILTER);
+    setFilter(prev => ({
+      ...INITIAL_FILTER,
+      viewMode: prev.viewMode || 'cards',
+    }));
     setCrossRefNotification(null);
     setHighlightedId(null);
   };
@@ -445,7 +470,7 @@ export const App: React.FC = () => {
         activeTab={activeTab}
         onTabChange={(tab) => {
           setActiveTab(tab);
-          setFilter({ ...filter, selectedCategory: '', searchAllTabs: false });
+          setFilter(prev => ({ ...prev, selectedCategory: '', searchAllTabs: false }));
         }}
         counts={counts}
         siteLastUpdated={siteDate}
@@ -520,7 +545,7 @@ export const App: React.FC = () => {
         {/* Search & Filter Bar */}
         <SearchAndFilterBar
           filter={filter}
-          onFilterChange={setFilter}
+          onFilterChange={handleFilterChange}
           categories={activeCategories}
           totalResults={displayTotalResults}
           activeFilterCount={activeFilterCount}
@@ -565,12 +590,14 @@ export const App: React.FC = () => {
                 setFilter({ ...filter, searchAllTabs: false });
               }}
               onClearSearch={handleClearFilters}
+              viewMode={filter.viewMode || 'cards'}
             />
           ) : (
             <>
               {activeTab === 'A' && (
                 <TabAView
                   brands={filteredTabA}
+                  viewMode={filter.viewMode || 'cards'}
                   onNavigateCrossReference={handleNavigateCrossReference}
                   highlightedId={highlightedId}
                   onOpenDetails={(item) => setModalItem({ item, type: 'rechargeable' })}
@@ -580,6 +607,7 @@ export const App: React.FC = () => {
               {activeTab === 'B' && (
                 <TabBView
                   deals={filteredTabB}
+                  viewMode={filter.viewMode || 'cards'}
                   onNavigateCrossReference={handleNavigateCrossReference}
                   highlightedId={highlightedId}
                   onOpenDetails={(item) => setModalItem({ item, type: 'deal' })}
@@ -589,6 +617,7 @@ export const App: React.FC = () => {
               {activeTab === 'C' && (
                 <TabCView
                   brands={filteredTabC}
+                  viewMode={filter.viewMode || 'cards'}
                   onNavigateCrossReference={handleNavigateCrossReference}
                   highlightedId={highlightedId}
                   onOpenDetails={(item) => setModalItem({ item, type: 'brand' })}
@@ -598,6 +627,7 @@ export const App: React.FC = () => {
               {activeTab === 'D' && (
                 <TabDView
                   discounts={filteredTabD}
+                  viewMode={filter.viewMode || 'cards'}
                   onNavigateCrossReference={handleNavigateCrossReference}
                   highlightedId={highlightedId}
                   onOpenDetails={(item) => setModalItem({ item, type: 'billing' })}

@@ -7,6 +7,7 @@ import { Zap, Tag, ExternalLink, CheckCircle2 } from 'lucide-react';
 
 interface TabDViewProps {
   discounts: ScrapedBillingDiscount[];
+  viewMode?: 'cards' | 'table';
   onNavigateCrossReference: (targetTab: TabKey, filterBrandName: string, targetId?: string) => void;
   highlightedId: string | null;
   onOpenDetails: (item: any, type: 'billing') => void;
@@ -14,6 +15,7 @@ interface TabDViewProps {
 
 export const TabDView: React.FC<TabDViewProps> = ({
   discounts,
+  viewMode = 'cards',
   onNavigateCrossReference,
   highlightedId,
   onOpenDetails,
@@ -24,6 +26,110 @@ export const TabDView: React.FC<TabDViewProps> = ({
         <Zap className="w-12 h-12 text-slate-300 mx-auto mb-3" />
         <h3 className="text-lg font-bold text-slate-700 mb-1">לא נמצאו הנחות במעמד החיוב</h3>
         <p className="text-sm text-slate-500">נסה לחפש בית עסק אחר או לנקות את תיבת החיפוש.</p>
+      </div>
+    );
+  }
+
+  if (viewMode === 'table') {
+    return (
+      <div>
+        {/* Informative Header Banner for Tab D */}
+        <div className="bg-amber-50/80 border border-amber-200/80 rounded-2xl p-4 mb-5 flex items-start gap-3 text-amber-900">
+          <div className="p-2 bg-amber-100 rounded-xl text-amber-700 shrink-0">
+            <Zap className="w-5 h-5" />
+          </div>
+          <div className="text-xs md:text-sm">
+            <h4 className="font-bold text-amber-950 mb-0.5">
+              כיצד פועלות הנחות במעמד החיוב?
+            </h4>
+            <p className="text-amber-800/90 leading-relaxed">
+              משלמים כרגיל באמצעות כרטיס האשראי UNIQ בקופה או באתר בית העסק, וההנחה (בין 1% ל-50%) מנוכה באופן אוטומטי בדף החשבון החודשי שלכם בחברת האשראי. אין צורך בהצגת קופון!
+            </p>
+          </div>
+        </div>
+
+        <div className="overflow-x-auto bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs transition-colors">
+          <table className="w-full text-right text-xs md:text-sm border-collapse">
+            <thead>
+              <tr className="bg-slate-50 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-b border-slate-200 dark:border-slate-800 font-bold">
+                <th className="py-3 px-4">שם בית העסק</th>
+                <th className="py-3 px-4">קטגוריה</th>
+                <th className="py-3 px-4">הנחה במעמד החיוב</th>
+                <th className="py-3 px-4">תגים ותנאים</th>
+                <th className="py-3 px-4">הצלבות / פעולות</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+              {discounts.map((item) => {
+                const isHighlighted = highlightedId === item.id || highlightedId === item.original_id;
+                const directUrl = item.direct_url || `https://www.uniq-club.co.il/benefit/${item.original_id}`;
+
+                return (
+                  <tr
+                    key={item.id}
+                    id={`card-${item.id}`}
+                    onClick={() => onOpenDetails(item, 'billing')}
+                    className={`hover:bg-slate-50/80 dark:hover:bg-slate-800/50 transition-colors cursor-pointer ${
+                      isHighlighted
+                        ? 'bg-amber-50/60 dark:bg-amber-950/40 font-semibold'
+                        : ''
+                    }`}
+                  >
+                    <td className="py-3 px-4">
+                      <div className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                        <span>{item.name}</span>
+                        <a
+                          href={directUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors p-0.5"
+                          title={`פתח את ${item.name} באתר UNIQ`}
+                        >
+                          <ExternalLink className="w-3.5 h-3.5 inline" />
+                        </a>
+                      </div>
+                    </td>
+                    <td className="py-3 px-4 whitespace-nowrap">
+                      <span className="inline-flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                        <Tag className="w-3 h-3 text-slate-400" />
+                        {item.category}
+                      </span>
+                    </td>
+                    <td className="py-3 px-4 whitespace-nowrap">
+                      <span className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-800/60">
+                        <Zap className="w-3 h-3 text-amber-600" />
+                        {item.discount_rate || item.discount}
+                      </span>
+                    </td>
+                    <td className="py-3 px-4">
+                      <div className="flex flex-wrap gap-1 items-center">
+                        {item.badges.map((badge, idx) => (
+                          <BadgePill key={idx} badge={badge} size="sm" />
+                        ))}
+                      </div>
+                    </td>
+                    <td className="py-3 px-4">
+                      {item.cross_references && item.cross_references.length > 0 ? (
+                        <div className="flex flex-wrap gap-1">
+                          {item.cross_references.map((ref, idx) => (
+                            <CrossReferenceTag
+                              key={idx}
+                              reference={ref}
+                              onNavigate={onNavigateCrossReference}
+                            />
+                          ))}
+                        </div>
+                      ) : (
+                        <span className="text-slate-400 dark:text-slate-600 text-xs">-</span>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }
