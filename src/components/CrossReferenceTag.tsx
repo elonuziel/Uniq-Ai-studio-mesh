@@ -17,25 +17,25 @@ export const CrossReferenceTag: React.FC<CrossReferenceTagProps> = ({
         return {
           name: 'כרטיס נטען 15%',
           icon: CreditCard,
-          color: 'bg-pink-50 text-pink-700 border-pink-300 hover:bg-pink-100',
+          color: 'bg-pink-50 dark:bg-pink-950/50 text-pink-700 dark:text-pink-300 border-pink-300 dark:border-pink-800/60 hover:bg-pink-100 dark:hover:bg-pink-900/40',
         };
       case 'B':
         return {
           name: 'הטבות מוצר',
           icon: ShoppingBag,
-          color: 'bg-emerald-50 text-emerald-700 border-emerald-300 hover:bg-emerald-100',
+          color: 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/40',
         };
       case 'C':
         return {
           name: 'הנחות מותגים',
           icon: Store,
-          color: 'bg-indigo-50 text-indigo-700 border-indigo-300 hover:bg-indigo-100',
+          color: 'bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 border-indigo-300 dark:border-indigo-800/60 hover:bg-indigo-100 dark:hover:bg-indigo-900/40',
         };
       case 'D':
         return {
           name: 'הנחה במעמד החיוב',
           icon: Zap,
-          color: 'bg-amber-50 text-amber-800 border-amber-300 hover:bg-amber-100',
+          color: 'bg-amber-50 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-800/60 hover:bg-amber-100 dark:hover:bg-amber-900/40',
         };
     }
   };
